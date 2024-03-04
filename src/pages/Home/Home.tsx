@@ -1,8 +1,10 @@
+import { Navbar } from "../../components/Navbar/Navbar";
+// import styles from "./Home.module.css";
+
 export const Home = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">way to health</h1>
-      <p>Home</p>
+      <Navbar />
     </>
   );
 };

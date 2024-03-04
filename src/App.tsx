@@ -6,6 +6,7 @@ import { HowToHelp } from "./pages/HowToHelp/HowToHelp";
 import { NewLetter } from "./pages/NewsLetter/NewLetter";
 import { OurWork } from "./pages/OurWork/OurWork";
 import { AppProvider } from "./providers/AppContext";
+import "./App.css";
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/how-to-help" element={<HowToHelp />} />
+          <Route path="/howToHelp" element={<HowToHelp />} />
           <Route path="/newsletter" element={<NewLetter />} />
-          <Route path="/our-work" element={<OurWork />} />
+          <Route path="/ourWork" element={<OurWork />} />
         </Routes>
       </Router>
     </AppProvider>

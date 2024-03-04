@@ -5,4 +5,59 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;400&display=swap");
+
+:root {
+  --bg-color: #2e2d33;
+  --font-light: #fefeff;
+  --accent-color: #5f93a0;
+  --call-to-action: #1a1921;
+  --flip-card: #bcb9b9;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-light);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: var(--bg-color);
+  color: var(--font-light);
+  max-width: 1200px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }

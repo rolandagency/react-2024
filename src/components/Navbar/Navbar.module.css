@@ -1,0 +1,18 @@
+.scrollDown nav {
+  transform: translate3d(0, -100%, 0);
+  background-color: #1a1921;
+  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+
+@media (min-width: 640px) {
+  .ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1020px) {
+  .ul {
+    font-size: 20px;
+  }
+}

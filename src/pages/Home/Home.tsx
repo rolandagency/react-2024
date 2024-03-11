@@ -8,7 +8,6 @@ export const Home = () => {
 
   const handleScroll = (e: React.UIEvent<HTMLElement>) => {
     const currentScrollY = (e.target as HTMLElement).scrollTop;
-    console.log(currentScrollY, lastScrollY);
 
     if (currentScrollY > lastScrollY) {
       setScrollDirection("scroll-down");

@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 import daisyui from "daisyui";
+=======
+const plugin = require('tailwindcss/plugin')
+
+const FlipCard = plugin(function({addUtilities}) {
+  addUtilities({
+    ".rotate-y-180" : {
+      transform: "rotateY(180deg)"
+    },
+    ".preserve-3d" : {
+      transformStyle: "preserve-3d"
+    },
+    ".perspective" : {
+      perspective: "1000px"
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden"
+    }
+  })
+})
+>>>>>>> 12c9c6e (added about page compnents)
 
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -10,7 +32,12 @@ export default {
       bebas: ["Bebas Neue", "sans-serif"],
     },
   },
-  extend: {},
+  extend: {  colors: {
+    "accent-color": "var(--accent-color)",
+    "font-light": "var(--font-light)",
+    "call-to-action": "var(--call-to-action)",
+    "flip-card": "var(--flip-card)"
+  },},
   daisyui: {
     themes: [
       {
@@ -34,5 +61,5 @@ export default {
     prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
   },
-  plugins: [daisyui],
+  plugins: [daisyui, FlipCard],
 };

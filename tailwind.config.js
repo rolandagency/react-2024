@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import daisyui from "daisyui";
-=======
-const plugin = require('tailwindcss/plugin')
+import plugin from "tailwindcss/plugin";
 
 const FlipCard = plugin(function({addUtilities}) {
   addUtilities({
@@ -19,7 +17,7 @@ const FlipCard = plugin(function({addUtilities}) {
     }
   })
 })
->>>>>>> 12c9c6e (added about page compnents)
+
 
 /** @type {import('tailwindcss').Config} */
 
@@ -31,13 +29,14 @@ export default {
       raleway: ["Raleway", "sans-serif"],
       bebas: ["Bebas Neue", "sans-serif"],
     },
+    colors: {
+      "accent-color": "var(--accent-color)",
+      "font-light": "var(--font-light)",
+      "call-to-action": "var(--call-to-action)",
+      "flip-card": "var(--flip-card)"
+    }
   },
-  extend: {  colors: {
-    "accent-color": "var(--accent-color)",
-    "font-light": "var(--font-light)",
-    "call-to-action": "var(--call-to-action)",
-    "flip-card": "var(--flip-card)"
-  },},
+  extend: {},
   daisyui: {
     themes: [
       {

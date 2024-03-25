@@ -1,4 +1,6 @@
-//import styles from "./aboutUs.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-regular-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -55,54 +57,66 @@ const BoardMember = ({
   );
 };
 
-const FlipCard = () => {
+const FlipCard = ({
+  name,
+  img,
+  position,
+  text1,
+  text2,
+}: {
+  name: string;
+  img: string;
+  position: string;
+  text1: string;
+  text2: string;
+}) => {
   return (
     <div className="group perspective bg-transparent w-[300px] h-[350px] rounded-xl">
       <div className="preserve-3d relative w-full h-full text-center duration-[600ms] shadow-[0 4px 8px 0 rgba(74, 74, 74, 0.2)] group-hover:rotate-y-180">
         <div className="backface-hidden absolute w-full h-full rounded-xl bg-flip-card overflow-hidden">
           <img
             className="w-[300px] h-[280px] rounded-[10px 10px 0px 0px]"
-            src="https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg"
+            src={img}
             alt="Avatar"
           />
           <h1 className="text-call-to-action mb-0 mt-3.5 leading-3 font-semibold">
-            Teah
+            {name}
           </h1>
           <h3 className="text-call-to-action mb-0 mt-3.5 leading-3">
-            Volunteer
+            {position}
           </h3>
         </div>
         <div className="backface-hidden absolute w-full h-full rounded-xl rotate-y-180 bg-accent-color text-font-light">
-          <p className="break-normal text-center font-medium m-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
-            nesciunt quod debitis temporibus culpa. Sed expedita, esse labore ut
-            similique odio. Corrupti.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
-            nesciunt quod debitis
-          </p>
+          <p className="break-normal text-center font-medium m-5">{text1}</p>
+          <p>{text2}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const DocumentLink = () => {
+const DocumentLink = ({ title, file }: { title: string; file: string }) => {
   return (
     <div className="border border-solid border-transparent flex justify-center items-center flex-row gap-2.5 flex-wrap my-0 mx-auto py-0 px-12">
-      <h3 className="text-left ml-12 text-lg">Profit and Loss 2020</h3>
+      <h3 className="text-left ml-12 text-lg">{title}</h3>
       <div className="border border-solid border-transparent flex justify-center items-center flex-row gap-2.5 flex-wrap my-6 mx-0">
-        <div className="view">
-          <a href="/assets/profit_and_loss_2020.pdf" target="_blank">
-            <i className="fa-regular fa-eye"></i>View
+        <div className="my-0 ml-1 mr-3.5 break-normal text-left font-medium">
+          <a href={file} target="_blank">
+            <FontAwesomeIcon className="mr-4 text-accent-color" icon={faEye} />
+            View
           </a>
         </div>
-        <div className="download">
-          <a href="/assets/profit_and_loss_2020.pdf" download>
-            <i className="fa-solid fa-download"></i>Download
+        <div>
+          <a
+            className="my-0 ml-1 mr-3.5 break-normal text-left font-medium"
+            href={file}
+            download
+          >
+            <FontAwesomeIcon
+              className="mr-4 text-accent-color"
+              icon={faDownload}
+            />
+            Download
           </a>
         </div>
       </div>
@@ -171,8 +185,85 @@ export const AboutUs = () => {
     },
   ];
 
-  const teamMembers = [1, 2, 3, 4, 5, 6];
-  const documentLinks = [1, 2, 3];
+  const teamMembers = [
+    {
+      name: "Teah",
+      img: "https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg",
+      position: "Volunteer",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+    {
+      name: "Tina",
+      img: "https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg",
+      position: "Missionaries",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+    {
+      name: "Sharon",
+      img: "https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg",
+      position: "Volunteer",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+    {
+      name: "Fedelin",
+      img: "https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg",
+      position: "Missionaries",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+    {
+      name: "Verdiu",
+      img: "https://headshots-inc.com/wp-content/uploads/2023/03/Office-Headshot-Examples-2-1.jpg",
+      position: "Volunteer",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+    {
+      name: "Wilson",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8DL05ZxAJdmMvzHREXZaDsvZWh7557zuWzg&usqp=CAU",
+      position: "Missionaries",
+      text1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis temporibus culpa. Sed expedita, esse
+  labore ut similique odio. Corrupti.`,
+      text2: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+  deserunt eos doloribus! Architecto eveniet dolorum tempora, aut
+  nesciunt quod debitis`,
+    },
+  ];
+  const documentLinks = [
+    { title: "Profit and Loss 2020", file: "/assets/profit_and_loss_2020.pdf" },
+    { title: "Profit and Loss 2021", file: "/assets/profit_and_loss_2021.pdf" },
+    { title: "Profit and Loss 2022", file: "/assets/profit_and_loss_2022.pdf" },
+  ];
 
   return (
     <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
@@ -314,8 +405,14 @@ export const AboutUs = () => {
         </div>
 
         <div className="border border-solid border-transparent justify-center items-center flex flex-row flex-row flex-wrap gap-8 my-12 px-6">
-          {teamMembers.map(() => (
-            <FlipCard />
+          {teamMembers.map((member) => (
+            <FlipCard
+              name={member.name}
+              img={member.img}
+              position={member.position}
+              text1={member.text1}
+              text2={member.text2}
+            />
           ))}
         </div>
       </section>
@@ -325,13 +422,13 @@ export const AboutUs = () => {
           <BlockTextAccent>PUBLIC</BlockTextAccent> DOCUMENTS
         </BlockTextHeader>
 
-        <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
-          Financials and meeting minutes
-        </p>
-
         <div className="py-0 px-7 text-center">
-          {documentLinks.map(() => (
-            <DocumentLink />
+          <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
+            Financials and meeting minutes
+          </p>
+
+          {documentLinks.map((document) => (
+            <DocumentLink title={document.title} file={document.file} />
           ))}
         </div>
       </section>

@@ -12,7 +12,6 @@ const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
 
 const BlockText = ({ children }: { children: React.ReactNode }) => {
   return (
-    // <p className="mt-8 mr-12 mb-5 ml-9 pt-12 pr-5 pb-7 pl-5 gap-12 columns-2">
     <p className="mt-2.5 mx-0 mb-7 py-0 px-2.5 break-normal font-medium text-lg">
       {children}
     </p>
@@ -267,7 +266,6 @@ export const AboutUs = () => {
 
   return (
     <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
-      {/* <div className="container"> */}
       <section className="mt-[10%]">
         <BlockTextHeader>
           {" "}

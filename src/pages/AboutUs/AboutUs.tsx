@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Navbar } from "../../components/Navbar/Navbar";
 import { boardMembers } from "../../utils/boardMemberValues";
 import { teamMembers } from "../../utils/teamMemberValues";
 import { documentLinks } from "../../utils/documentLinkValues";
@@ -127,8 +129,27 @@ const DocumentLink = ({ title, file }: { title: string; file: string }) => {
 };
 
 export const AboutUs = () => {
+  const [scrollDirection, setScrollDirection] = useState("scroll-up");
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    const currentScrollY = (e.target as HTMLElement).scrollTop;
+    console.log(currentScrollY, lastScrollY);
+    if (currentScrollY > lastScrollY) {
+      setScrollDirection("scroll-down");
+    } else {
+      setScrollDirection("scroll-up");
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
   return (
-    <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
+    <div
+      onScroll={handleScroll}
+      className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto "
+    >
+      <Navbar scrollDirection={scrollDirection} />
       <section className="mt-[10%]">
         <BlockTextHeader>
           {" "}
@@ -246,6 +267,7 @@ export const AboutUs = () => {
         <div className="flex justify-center items-center my-1 mx-0 flex-row gap-7 flex-wrap">
           {boardMembers.map((member) => (
             <BoardMember
+              key={member.name}
               name={member.name}
               img={member.img}
               description={member.description}
@@ -268,6 +290,7 @@ export const AboutUs = () => {
         <div className="border border-solid border-transparent justify-center items-center flex flex-row flex-row flex-wrap gap-8 my-12 px-6">
           {teamMembers.map((member) => (
             <FlipCard
+              key={member.name}
               name={member.name}
               img={member.img}
               position={member.position}
@@ -289,7 +312,11 @@ export const AboutUs = () => {
           </p>
 
           {documentLinks.map((document) => (
-            <DocumentLink title={document.title} file={document.file} />
+            <DocumentLink
+              key={document.title}
+              title={document.title}
+              file={document.file}
+            />
           ))}
         </div>
       </section>

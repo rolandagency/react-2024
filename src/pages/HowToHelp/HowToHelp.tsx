@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import ContactUs from "../../components/ContactUs/ContactUs";
 
 export const HowToHelp = () => {
@@ -21,12 +19,24 @@ export const HowToHelp = () => {
   };
   return (
     <>
-      <div className="w-full overflow-auto">
+      <div className="w-full max-w-[1200px] m-auto overflow-auto">
         <div onScroll={handleScroll}>
           <Navbar scrollDirection={scrollDirection} />
           <div className="mb-4 mt-[10rem]">
-            <h1 className="text-3xl font-bold underline">How To Help</h1>
-            <p>way to health</p>
+            {/* TODO update later with provided information */}
+            {/* <h1 className="text-3xl font-bold underline">How To Help</h1>
+            <p>way to health</p> */}
+            <div className="text-6xl text-center font-bebas mb-6">
+              <span className="text-primary">CONTACT</span> US
+            </div>
+            <div className="text-center mb-6">
+              Please contact us with any questions or if you need info about
+              traveling abroad as a volunteer. Do you have questions about how
+              to channel your skills to get involved? Are you interested in
+              partnering with Way to Health? Do you have ideas you'd like to
+              contribute? Reach out to us! We welcome your inquiries and would
+              love to hear from you, ready to answer any questions you may have.
+            </div>
             <ContactUs />
           </div>
         </div>

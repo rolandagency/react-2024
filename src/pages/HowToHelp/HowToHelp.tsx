@@ -26,7 +26,48 @@ export const HowToHelp = () => {
             {/* TODO update later with provided information */}
             {/* <h1 className="text-3xl font-bold underline">How To Help</h1>
             <p>way to health</p> */}
-            <div className="text-6xl text-center font-bebas mb-6">
+
+            <section className="flex flex-col gap-2 border-b-[1px] border-white pb-4 mb-8">
+              <div className="flex flex-col gap-2">
+                <h2>DONATIONS</h2>
+                <p>Paypal Link</p>
+                <p>Venmo: @Cite-Soleil</p>
+              </div>
+
+              <section>
+                <div>
+                  <h2 className="mb-2">needed supplies</h2>
+                  TBD
+                </div>
+              </section>
+              <section>
+                <div>
+                  <h2 className="mb-2">mission trips</h2>
+                  TBD
+                </div>
+              </section>
+              <section>
+                <div>
+                  <h2 className="mb-2">MATCHING DONATION PROGRAMS</h2>
+                  <p>
+                    Looking to maximize the impact of your donation? Inquire
+                    with your employer about their donation matching program!
+                    When you contribute to Way to Health through this
+                    initiative, your employer will automatically double your
+                    donation using their funds. If Way to Health is not
+                    currently among the nonprofits your company supports, reach
+                    out to us. We can work together to join their matching
+                    donations program, ensuring your donation goes even further.
+                    Supply EIN number. "Here is everything you will need for
+                    your employer to partner with WTH..."Currently, we have
+                    partnerships with HCA and the Shell Oil Foundation. If you'd
+                    like to see your employer join in to double your donation,
+                    encourage them to connect with us! Contact information
+                  </p>
+                </div>
+              </section>
+            </section>
+            <div className="text-7xl text-center font-bebas mb-6">
               <span className="text-primary">CONTACT</span> US
             </div>
             <div className="text-center mb-6">

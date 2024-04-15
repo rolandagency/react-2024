@@ -1,0 +1,33 @@
+.gallery {
+  margin-top: 10rem;
+}
+.gallery header {
+  height: 10rem;
+  border-bottom: 1px solid var(--font-light);
+  position: relative;
+}
+.gallery header h1 {
+  margin-left: 10rem;
+  font-size: 65px;
+  font-weight: 800;
+}
+.gallery_images {
+  height: 100rem;
+  background-color: var(--call-to-action);
+  width: 100vw;
+  max-width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.gallery_images .images {
+  width: 75%;
+  background-color: white;
+  border-radius: 10px;
+  height: 350px;
+  color: black;
+  margin: 3rem auto;
+}
+.gallery header span {
+  color: var(--accent-color);
+}

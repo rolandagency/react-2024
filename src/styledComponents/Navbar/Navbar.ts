@@ -74,9 +74,10 @@ export const NavLinks = styled.div.attrs({
   id: "navLinks",
   })`
   display: none;
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
   justify-content: space-evenly;
+  background-color: #2e2d33;
 
   @media ${device.tablet} {
     height: auto;

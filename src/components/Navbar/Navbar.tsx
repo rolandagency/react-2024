@@ -17,8 +17,6 @@ type NavbarProps = {
   scrollDirection: string;
 };
 
-// navbar hamburger menu doesn't open on click, needs fixing
-
 export const Navbar = ({ scrollDirection }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 

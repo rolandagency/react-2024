@@ -25,8 +25,8 @@ export const Home = () => {
   const heroImage = "./hero_boy-semi-final-2.png";
 
   return (
-    <div className="w-full overflow-auto">
-      <div onScroll={handleScroll}>
+    <div onScroll={handleScroll} className="w-full overflow-auto">
+      <div>
         <Navbar scrollDirection={scrollDirection} />
         <div
           className="hero min-h-screen mb-4 mt-[10rem]"

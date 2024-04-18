@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { slides, TCarouselSlide } from "../../utils/carouselValues";
 import { convertedStyles } from "../../utils/convertedStyles";
@@ -8,27 +8,42 @@ import { faYoutube, faFacebook } from "@fortawesome/free-brands-svg-icons";
 export const Home = () => {
   const [scrollDirection, setScrollDirection] = useState("scroll-up");
   const [lastScrollY, setLastScrollY] = useState(0);
-
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const currentScrollY = (e.target as HTMLElement).scrollTop;
-    console.log(currentScrollY, lastScrollY);
-    if (currentScrollY > lastScrollY) {
-      setScrollDirection("scroll-down");
-    } else {
-      setScrollDirection("scroll-up");
-    }
-
-    setLastScrollY(currentScrollY);
-  };
+  const heroSectionRef = useRef<HTMLDivElement | null>(null);
 
   const heroSlides: TCarouselSlide[] = slides;
   const heroImage = "./hero_boy-semi-final-2.png";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const triggerPoint = heroSectionRef.current
+        ? heroSectionRef.current.offsetHeight * 0.75
+        : 0;
+
+      if (heroSectionRef.current && currentScrollY > triggerPoint) {
+        if (currentScrollY > lastScrollY) {
+          setScrollDirection("scroll-down");
+        } else {
+          setScrollDirection("scroll-up");
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div onScroll={handleScroll} className="w-full overflow-auto">
+    <div className="w-full overflow-auto">
       <div>
         <Navbar scrollDirection={scrollDirection} />
         <div
+          ref={heroSectionRef}
           className="hero min-h-screen mb-4 mt-[10rem]"
           style={{
             backgroundImage: `url(${heroImage})`,

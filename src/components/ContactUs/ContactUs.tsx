@@ -75,42 +75,42 @@ export default function ContactUs() {
           <p className="text-center">
             <a
               title="Download file: from_1023_application.pdf"
-              href="./assets/form_1023_application.pdf"
+              href="/pdf/form_1023_application.pdf"
             >
               form_1023_application
             </a>
             <br />
             <a
               title="Download file: irs_form_1023_attachment_pdf.pdf"
-              href="./assets/irs_form_1023_attachment_pdf.pdf"
+              href="/pdf/irs_form_1023_attachment_pdf.pdf"
             >
               IRS_Form_1023-attachment
             </a>
             <br />
             <a
               title="Download file: bylaws_2023.pdf"
-              href="./assets/bylaws_2023.pdf"
+              href="/pdf/bylaws_2023.pdf"
             >
               Bylaws
             </a>
             <br />
             <a
               title="Download file: profit_and_loss_2022.pdf"
-              href="./assets/profit_and_loss_2022.pdf"
+              href="/profit_and_loss/profit_and_loss_2022.pdf"
             >
               Profit_Loss_2022
             </a>
             <br />
             <a
               title="Download file: profit_and_loss_2021.pdf"
-              href="./assets/profit_and_loss_2021.pdf"
+              href="/profit_and_loss/profit_and_loss_2021.pdf"
             >
               Profit_Loss_2021
             </a>
             <br />
             <a
               title="Download file: profit_and_loss_2020.pdf"
-              href="./assets/profit_and_loss_2020.pdf"
+              href="/profit_and_loss/profit_and_loss_2020.pdf"
             >
               Profit_loss_2020
             </a>

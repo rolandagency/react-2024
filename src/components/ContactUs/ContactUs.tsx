@@ -68,12 +68,13 @@ export default function ContactUs() {
 
       <dialog
         className={`${
-          openProfitsModal ? "block" : "hidden"
-        } flex justify-center items-center absolute z-[1001] inset-0 w-[100vw] h-[100vh]`}
+          openProfitsModal ? "opacity-[100]" : "opacity-[0]"
+        } transition duration-300 flex justify-center items-center absolute z-[1001] w-[35vw] h-[35vh] inset-0 bg-secondary`}
       >
         <div className="border-[1px] border-primary p-2 flex flex-col justify-center items-center">
           <p className="text-center">
             <a
+              className="text-primary"
               title="Download file: from_1023_application.pdf"
               href="/pdf/form_1023_application.pdf"
             >
@@ -81,6 +82,7 @@ export default function ContactUs() {
             </a>
             <br />
             <a
+              className="text-primary"
               title="Download file: irs_form_1023_attachment_pdf.pdf"
               href="/pdf/irs_form_1023_attachment_pdf.pdf"
             >
@@ -88,6 +90,7 @@ export default function ContactUs() {
             </a>
             <br />
             <a
+              className="text-primary"
               title="Download file: bylaws_2023.pdf"
               href="/pdf/bylaws_2023.pdf"
             >
@@ -95,6 +98,7 @@ export default function ContactUs() {
             </a>
             <br />
             <a
+              className="text-primary"
               title="Download file: profit_and_loss_2022.pdf"
               href="/profit_and_loss/profit_and_loss_2022.pdf"
             >
@@ -102,6 +106,7 @@ export default function ContactUs() {
             </a>
             <br />
             <a
+              className="text-primary"
               title="Download file: profit_and_loss_2021.pdf"
               href="/profit_and_loss/profit_and_loss_2021.pdf"
             >
@@ -109,6 +114,7 @@ export default function ContactUs() {
             </a>
             <br />
             <a
+              className="text-primary"
               title="Download file: profit_and_loss_2020.pdf"
               href="/profit_and_loss/profit_and_loss_2020.pdf"
             >

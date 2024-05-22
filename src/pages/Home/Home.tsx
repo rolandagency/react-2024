@@ -49,7 +49,7 @@ export const Home = () => {
             backgroundImage: `url(${heroImage})`,
           }}
         >
-          <div className="hero-overlay bg-opacity-60"></div>
+          <div className=" hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-base-100">
             <div className="max-w-lg">
               <h1 className="mb-5 text-9xl font-bold uppercase font-bebas ">

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../utils/navLinks";
-import WayToHealth_Logo from "../../assets/WayToHealth_Logo.svg";
+import WayToHealth_Logo from "/logo/WayToHealth_Logo.svg";
 import {
   NavbarWrapper,
   FlexNav,

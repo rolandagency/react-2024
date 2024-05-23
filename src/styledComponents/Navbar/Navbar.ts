@@ -23,6 +23,7 @@ export const NavbarWrapper = styled.nav.attrs({
   max-width: 1200px;
   z-index: 1000;
   transition: all 300ms ease-in-out;
+  background-color: #2e2d33
 `;
 
 export const FlexNav = styled.div`
@@ -73,10 +74,10 @@ export const NavToggle = styled.button.attrs({
 export const NavLinks = styled.div.attrs({
   id: "navLinks",
   })`
-  display: none;
   height: 100vh;
   overflow: hidden;
   justify-content: space-evenly;
+  background-color: #2e2d33;
 
   @media ${device.tablet} {
     height: auto;

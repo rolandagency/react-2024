@@ -1,34 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { slides, TCarouselSlide } from "../../utils/carouselValues";
 import { convertedStyles } from "../../utils/convertedStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import AppContext from "../../providers/AppContext";
 
 export const Home = () => {
-  const [scrollDirection, setScrollDirection] = useState("scroll-up");
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const currentScrollY = (e.target as HTMLElement).scrollTop;
-    console.log(currentScrollY, lastScrollY);
-    if (currentScrollY > lastScrollY) {
-      setScrollDirection("scroll-down");
-    } else {
-      setScrollDirection("scroll-up");
-    }
-
-    setLastScrollY(currentScrollY);
-  };
+  const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
   const heroSlides: TCarouselSlide[] = slides;
   const heroImage = "./hero_boy-semi-final-2.png";
 
   return (
     <div className="w-full overflow-auto">
-      <div onScroll={handleScroll}>
+      <div>
         <Navbar scrollDirection={scrollDirection} />
         <div
+          ref={heroSectionRef}
           className="hero min-h-screen mb-4 mt-[10rem]"
           style={{
             backgroundImage: `url(${heroImage})`,

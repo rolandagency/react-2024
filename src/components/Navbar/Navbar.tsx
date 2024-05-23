@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../utils/navLinks";
-import WayToHealth_Logo from "../../assets/WayToHealth_Logo.svg";
+import WayToHealth_Logo from "/logo/WayToHealth_Logo.svg";
 import {
   NavbarWrapper,
   FlexNav,
@@ -11,14 +11,19 @@ import {
   NavLiLink,
 } from "../../styledComponents/Navbar/Navbar";
 import styles from "./Navbar.module.css";
+import { useState } from "react";
 
 type NavbarProps = {
   scrollDirection: string;
 };
 
-// navbar hamburger menu doesn't open on click, needs fixing
-
 export const Navbar = ({ scrollDirection }: NavbarProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={scrollDirection === "scroll-down" ? styles.scrollDown : ""}>
       <NavbarWrapper>
@@ -27,9 +32,9 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
             <NavLogo>
               <img src={WayToHealth_Logo} alt="Way to Health" />
             </NavLogo>
-            <NavToggle>☰</NavToggle>
+            <NavToggle onClick={handleToggle}>☰</NavToggle>
           </NavHeader>
-          <NavLinks>
+          <NavLinks className={`${isOpen ? "flex" : "hidden"}`}>
             <ul className={styles.ul}>
               {navLinks.map((link) => {
                 const { id, href, text } = link;

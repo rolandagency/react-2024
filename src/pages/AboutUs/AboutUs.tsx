@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { boardMembers } from "../../utils/boardMemberValues";
 import { teamMembers } from "../../utils/teamMemberValues";
@@ -6,6 +6,7 @@ import { documentLinks } from "../../utils/documentLinkValues";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import AppContext from "../../providers/AppContext";
 
 const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -129,28 +130,12 @@ const DocumentLink = ({ title, file }: { title: string; file: string }) => {
 };
 
 export const AboutUs = () => {
-  const [scrollDirection, setScrollDirection] = useState("scroll-up");
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const currentScrollY = (e.target as HTMLElement).scrollTop;
-    console.log(currentScrollY, lastScrollY);
-    if (currentScrollY > lastScrollY) {
-      setScrollDirection("scroll-down");
-    } else {
-      setScrollDirection("scroll-up");
-    }
-
-    setLastScrollY(currentScrollY);
-  };
+  const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
   return (
-    <div
-      onScroll={handleScroll}
-      className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto "
-    >
+    <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
       <Navbar scrollDirection={scrollDirection} />
-      <section className="mt-[10%]">
+      <section className="mt-[10%]" ref={heroSectionRef}>
         <BlockTextHeader>
           {" "}
           <BlockTextAccent>WHO</BlockTextAccent> WE SERVE

@@ -1,29 +1,18 @@
-import { useState } from 'react';
-import { Navbar } from '../../components/Navbar/Navbar';
-import styles from './Gallery.module.css';
+import { useContext } from "react";
+import { Navbar } from "../../components/Navbar/Navbar";
+import styles from "./Gallery.module.css";
+import AppContext from "../../providers/AppContext";
 
 export const Gallery = () => {
-  const [scrollDirection, setScrollDirection] = useState('scroll-up');
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
-  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
-    const currentScrollY = (e.target as HTMLElement).scrollTop;
-    console.log(currentScrollY, lastScrollY);
-    if (currentScrollY > lastScrollY) {
-      setScrollDirection('scroll-down');
-    } else {
-      setScrollDirection('scroll-up');
-    }
-
-    setLastScrollY(currentScrollY);
-  };
   return (
     <>
       <div className="w-full max-w-[1200px] m-auto overflow-auto">
-        <div onScroll={handleScroll}>
+        <div>
           <Navbar scrollDirection={scrollDirection} />
         </div>
-        <div className={styles.gallery}>
+        <div className={styles.gallery} ref={heroSectionRef}>
           <header>
             <h1>
               <span>GAL</span>LERY

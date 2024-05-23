@@ -23,6 +23,7 @@ export const NavbarWrapper = styled.nav.attrs({
   max-width: 1200px;
   z-index: 1000;
   transition: all 300ms ease-in-out;
+  background-color: #2e2d33
 `;
 
 export const FlexNav = styled.div`

@@ -272,7 +272,7 @@ export const AboutUs = () => {
           </p>
         </div>
 
-        <div className="border border-solid border-transparent justify-center items-center flex flex-row flex-row flex-wrap gap-8 my-12 px-6">
+        <div className="border border-solid border-transparent justify-center items-center flex flex-row flex-wrap gap-8 my-12 px-6">
           {teamMembers.map((member) => (
             <FlipCard
               key={member.name}

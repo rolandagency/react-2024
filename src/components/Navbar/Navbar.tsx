@@ -25,7 +25,7 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
   };
 
   return (
-    // need to add content to navbar on
+    // need to add content to navbar on monday
     <div className={scrollDirection === "scroll-down" ? styles.scrollDown : ""}>
       <NavbarWrapper>
         <FlexNav>

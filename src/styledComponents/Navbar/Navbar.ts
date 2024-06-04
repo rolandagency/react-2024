@@ -71,6 +71,18 @@ export const NavToggle = styled.button.attrs({
   }
 `;
 
+export const HeaderLinks = styled.div.attrs({
+  id: "headerLinks"
+})`
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+
+  @media ${device.tablet} {
+    margin: auto
+  }
+`;
+
 export const NavLinks = styled.div.attrs({
   id: "navLinks",
   })`
@@ -120,7 +132,7 @@ position: relative;
 
 @media ${device.tablet} {
   display: inline-block;
-    border: none;
+  border: none;
 }
 
 @media ${device.desktop} {

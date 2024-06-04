@@ -9,6 +9,7 @@ import {
   NavToggle,
   NavLinks,
   NavLiLink,
+  HeaderLinks,
 } from "../../styledComponents/Navbar/Navbar";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
@@ -36,6 +37,10 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
             <NavToggle onClick={handleToggle}>☰</NavToggle>
           </NavHeader>
           <NavLinks className={`${isOpen ? "flex" : "hidden"}`}>
+            <HeaderLinks>
+              <a href="">Contact Us</a>
+              <a href="">Donate</a>
+            </HeaderLinks>
             <ul className={styles.ul}>
               {navLinks.map((link) => {
                 const { id, href, text } = link;

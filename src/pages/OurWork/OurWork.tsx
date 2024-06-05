@@ -30,7 +30,7 @@ export const OurWork = () => {
       {/* Hero */}
 
       <section
-        className={`mt-[10%] w-3/4 h-90 bg-secondary ml-auto mr-auto content-center
+        className={`mt-[10%] w-3/4 h-90 bg-footer ml-auto mr-auto content-center
      flex flex-row md:flex sm:flex-wrap xs:flex-wrap sm:mt-[20%] xs:mt-[30%] md:mt-[15%]`}
         ref={heroSectionRef}
       >

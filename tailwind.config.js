@@ -33,7 +33,9 @@ export default {
       "accent-color": "var(--accent-color)",
       "font-light": "var(--font-light)",
       "call-to-action": "var(--call-to-action)",
-      "flip-card": "var(--flip-card)"
+      "flip-card": "var(--flip-card)",
+      "footer": "#353238",
+      "icon": "#72797B",
     },
     screens: {
       '2xs': { 'min': '300px' },

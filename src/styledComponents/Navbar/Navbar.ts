@@ -77,18 +77,21 @@ export const HeaderLinks = styled.div.attrs({
   display: flex;
   justify-content: space-evenly;
   align-content: space-evenly;
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 20px;
 
   @media ${device.tablet} {
-    margin: auto
+    margin: auto;
+    padding-top: 20px;
   }
 `;
 
 export const NavLinks = styled.div.attrs({
   id: "navLinks",
   })`
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  justify-content: space-evenly;
   background-color: #2e2d33;
 
   @media ${device.tablet} {
@@ -97,6 +100,9 @@ export const NavLinks = styled.div.attrs({
     z-index: 1;
     background: transparent;
     background-color: transparent;
+    flex-direction: row
+    justify-content: space-evenly;
+
   }
 
   @media ${device.desktop} {
@@ -109,7 +115,7 @@ list-style: none;
 margin: 1.25rem 0;
 border-bottom: 2px solid whitesmoke;
 font-family: "Bebas Neue", cursive, sans-serif;
-width: 300px;
+width: 100px;
 padding-left: 5px;
 position: relative;
 

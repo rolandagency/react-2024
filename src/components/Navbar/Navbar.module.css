@@ -4,6 +4,27 @@
   filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
 }
 
+.contact-btns::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    margin-top: 18px;
+    right: 0;
+    background-color: var(--accent-color);
+    transition: all 0.2s ease;
+}
+
+.contact-btns:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: var(--accent-color);
+}
+
+.ul {
+  margin: 0 auto;
+}
+
 @media (min-width: 640px) {
   .ul {
     display: flex;

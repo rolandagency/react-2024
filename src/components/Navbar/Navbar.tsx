@@ -38,8 +38,15 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
           </NavHeader>
           <NavLinks className={`${isOpen ? "flex" : "hidden"}`}>
             <HeaderLinks>
-              <a href="">Contact Us</a>
-              <a href="">Donate</a>
+              <a className="contact-btns" href="">
+                Contact Us
+              </a>
+              <a
+                className="contact-btns"
+                href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
+              >
+                Donate
+              </a>
             </HeaderLinks>
             <ul className={styles.ul}>
               {navLinks.map((link) => {

@@ -7,11 +7,13 @@ export const NewLetter = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
   return (
-    <div>
+    <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
       <Navbar scrollDirection={scrollDirection} />
-      <h1 className="text-3xl font-bold underline">NewLetter</h1>
-      <section ref={heroSectionRef}>
-        <p>way to health</p>
+      <section className="grid grid-cols-2 items-center" ref={heroSectionRef}>
+        <h1 className="text-center text-3xl font-bold underline">NewLetter</h1>
+        <div>
+          <img src="newsletter_hero.svg" alt="hero" />
+        </div>
       </section>
       <section className="grid grid-cols-3">
         <div className="col-span-2">

@@ -8,11 +8,13 @@ import { OurWork } from "./pages/OurWork/OurWork";
 import { AppProvider } from "./providers/AppContext";
 
 import "./App.css";
+import { ScrollToTop } from "./components/scrollToTop/ScrollToTop";
 
 function App() {
   return (
     <AppProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />

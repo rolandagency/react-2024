@@ -3,7 +3,7 @@ import { Home } from "./pages/Home/Home";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { Gallery } from "./pages/Gallery/Gallery";
 import { HowToHelp } from "./pages/HowToHelp/HowToHelp";
-import { NewLetter } from "./pages/NewsLetter/NewLetter";
+import { NewsLetter } from "./pages/NewsLetter/NewsLetter";
 import { OurWork } from "./pages/OurWork/OurWork";
 import { AppProvider } from "./providers/AppContext";
 
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/howToHelp" element={<HowToHelp />} />
-          <Route path="/newsletter" element={<NewLetter />} />
+          <Route path="/newsletter" element={<NewsLetter />} />
           <Route path="/ourWork" element={<OurWork />} />
         </Routes>
       </Router>

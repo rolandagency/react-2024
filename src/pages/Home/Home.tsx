@@ -5,7 +5,6 @@ import { convertedStyles } from "../../utils/convertedStyles";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
 
-
 export const Home = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
@@ -158,25 +157,6 @@ export const Home = () => {
     </div>
   );
 };
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-primary text-base-100 text-center py-4 w-full">
-//       <div className="flex justify-center gap-5">
-//         <p className="text-2xl">© 2023 Way to Health</p>
-//         <a
-//           href="https://www.youtube.com/@waytohealth4119/featured"
-//           target="_blank"
-//         >
-//           <FontAwesomeIcon icon={faYoutube} size="2x" />
-//         </a>
-//         <a href="https://www.facebook.com/medicalhelpforhaiti/" target="_blank">
-//           <FontAwesomeIcon icon={faFacebook} size="2x" />
-//         </a>
-//       </div>
-//     </footer>
-//   );
-// };
 
 const Carousel = ({ slides }: { slides: TCarouselSlide[] }) => {
   const [activeSlide, setActiveSlide] = useState(0);

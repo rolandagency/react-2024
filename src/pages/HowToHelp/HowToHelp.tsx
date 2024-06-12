@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import AppContext from "../../providers/AppContext";
+import { Footer } from "../../components/Footer/Footer";
 
 export const HowToHelp = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
@@ -72,6 +73,7 @@ export const HowToHelp = () => {
             </div>
             <ContactUs />
           </div>
+          <Footer />
         </div>
       </div>
     </>

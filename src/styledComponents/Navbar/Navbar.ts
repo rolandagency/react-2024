@@ -75,7 +75,7 @@ export const HeaderLinks = styled.div.attrs({
   id: "headerLinks"
 })`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-content: space-evenly;
   font-family: "Bebas Neue", cursive, sans-serif;
   font-size: 20px;
@@ -115,7 +115,7 @@ list-style: none;
 margin: 1.25rem 0;
 border-bottom: 2px solid whitesmoke;
 font-family: "Bebas Neue", cursive, sans-serif;
-width: 100px;
+width: fit-content;
 padding-left: 5px;
 position: relative;
 
@@ -139,10 +139,12 @@ position: relative;
 @media ${device.tablet} {
   display: inline-block;
   border: none;
+  margin: 1.25rem 12px;
 }
 
 @media ${device.desktop} {
   &::after {
   margin-top: 24px;
+  
   }
 `;

@@ -23,8 +23,12 @@ export const NewsLetter = () => {
   return (
     <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
       <Navbar scrollDirection={scrollDirection} />
-      <section className="grid grid-cols-2 items-center" ref={heroSectionRef}>
-        <h1 className="text-center text-3xl font-bold underline">NewLetter</h1>
+      <section
+        className="bg-[#363438] grid grid-cols-2 items-center"
+        ref={heroSectionRef}
+      >
+        <h1 className="text-center text-3xl font-bold">NewLetter</h1>
+
         <div>
           <img src="newsletter_hero.svg" alt="hero" />
         </div>
@@ -38,9 +42,11 @@ export const NewsLetter = () => {
               content={article.content}
             />
           ))}
-          <div>WAY TO HEALTH - JANUARY 2024</div>
+          <div className="bg-[#29282D] mix-blend-screen">
+            WAY TO HEALTH - JANUARY 2024
+          </div>
         </div>
-        <div>
+        <div className="bg-[#333135]">
           <h2>Upcoming Events</h2>
           <div>
             {events.map((ev, index) => (

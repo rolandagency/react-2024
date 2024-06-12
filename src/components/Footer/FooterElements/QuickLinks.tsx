@@ -1,25 +1,29 @@
+import { useNavigate } from "react-router-dom";
+
+
 export const QuickLinks = () => {
+  const navigate = useNavigate()
   return (
     <div className="border border-transparent px-6 mx-8 py-2 
     sm:mx-2 sm:px-2 xs:mx-2 xs:px-2">
         <ul className="text-left">
-          <li>
-            <a href="">Home</a>
+          <li onClick={() => navigate('/')}>
+          Home
           </li>
-          <li>
-            <a href="">About</a>
+          <li onClick={() => navigate('/about')}>
+          About
           </li>
-          <li>
-            <a href="">Gallery</a>
+          <li onClick={() => navigate('/gallery')}>
+          Gallery
           </li>
-          <li>
-            <a href="">How To Help</a>
+          <li onClick={() => navigate('howToHelp')} >
+          How To Help
           </li>
-          <li>
-            <a href="">Newsletter</a>
+          <li onClick={() => navigate('/newsletter')}>
+          Newsletter
           </li>
-          <li>
-            <a href="">Our Work</a>
+          <li onClick={() => navigate('/ourWork')}>
+          Our Work
           </li>
         </ul>
     </div>

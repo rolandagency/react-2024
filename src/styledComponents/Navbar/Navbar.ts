@@ -13,6 +13,7 @@ export const device = {
 
 export const NavbarWrapper = styled.nav.attrs({
   id: "divNav",
+  className: "container"
 })`
   position: fixed;
   top: 0;
@@ -20,7 +21,6 @@ export const NavbarWrapper = styled.nav.attrs({
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
   z-index: 1000;
   transition: all 300ms ease-in-out;
   background-color: #2e2d33

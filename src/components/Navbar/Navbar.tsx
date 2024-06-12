@@ -27,7 +27,11 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
 
   return (
     // need to add content to navbar on monday
-    <div className={scrollDirection === "scroll-down" ? styles.scrollDown : ""}>
+    <div
+      className={`container ${
+        scrollDirection === "scroll-down" ? styles.scrollDown : ""
+      }`}
+    >
       <NavbarWrapper>
         <FlexNav>
           <NavHeader>
@@ -38,9 +42,6 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
           </NavHeader>
           <NavLinks className={`${isOpen ? "flex" : "hidden"}`}>
             <HeaderLinks>
-              <a className="contact-btns" href="">
-                Contact Us
-              </a>
               <a
                 className="contact-btns"
                 href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"

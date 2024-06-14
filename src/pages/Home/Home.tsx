@@ -15,6 +15,7 @@ export const Home = () => {
     <div className="w-full overflow-auto">
       <div>
         <Navbar scrollDirection={scrollDirection} />
+        {/* work on hero image to make it look good on mobile */}
         <div
           ref={heroSectionRef}
           className="hero min-h-screen mb-4 mt-[10rem]"

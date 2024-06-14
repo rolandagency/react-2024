@@ -75,7 +75,7 @@ export const HeaderLinks = styled.div.attrs({
   id: "headerLinks"
 })`
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-content: space-evenly;
   font-family: "Bebas Neue", cursive, sans-serif;
   font-size: 20px;
@@ -83,6 +83,7 @@ export const HeaderLinks = styled.div.attrs({
   @media ${device.tablet} {
     margin: auto;
     padding-top: 20px;
+    justify-content: flex-end;
   }
 `;
 
@@ -115,7 +116,6 @@ list-style: none;
 margin: 1.25rem 0;
 border-bottom: 2px solid whitesmoke;
 font-family: "Bebas Neue", cursive, sans-serif;
-width: fit-content;
 padding-left: 5px;
 position: relative;
 
@@ -140,11 +140,11 @@ position: relative;
   display: inline-block;
   border: none;
   margin: 1.25rem 12px;
+  width: fit-content;
 }
 
 @media ${device.desktop} {
   &::after {
   margin-top: 24px;
-  
   }
 `;

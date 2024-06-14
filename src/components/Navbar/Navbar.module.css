@@ -4,7 +4,7 @@
   filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
 }
 
-.contact-btns::after {
+.contact-btn::after {
     content: "";
     position: absolute;
     width: 0;
@@ -15,7 +15,7 @@
     transition: all 0.2s ease;
 }
 
-.contact-btns:hover::after {
+.contact-btn:hover::after {
   width: 100%;
   left: 0;
   background-color: var(--accent-color);
@@ -29,6 +29,7 @@
   .ul {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
 }
 

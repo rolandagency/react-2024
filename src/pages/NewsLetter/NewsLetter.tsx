@@ -45,7 +45,7 @@ export const NewsLetter = () => {
             />
           ))}
         </div>
-        <div className="bg-[#333135] px-10 pt-20">
+        <div className="bg-[#333135] flex flex-col justify-between px-10 pt-20">
           <h2 className="font-inter text-4xl my-5 text-center">
             Upcoming Events
           </h2>
@@ -54,11 +54,21 @@ export const NewsLetter = () => {
               <Event key={`event-${index}`} description={ev.description} />
             ))}
           </div>
-          <div>DONATE</div>
-          <h2>Contact Info</h2>
-          <div>
-            Way to Health 414 Towne Ct. Alvin TX, 77511 281-229-3139
-            waytohealthorg@gmail.com
+          <div className="flex flex-col items-center">
+            <button
+              className="font-inter bg-[#29282D] text-5xl text-bold text-accent-color px-8 py-4"
+              type="button"
+            >
+              Donate
+            </button>
+          </div>
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl my-6">Contact Info</h2>
+            <div className="text-xl">Way to Health</div>
+            <div className="text-xl">414 Towne Ct.</div>
+            <div className="text-xl">Alvin TX, 77511</div>
+            <div className="text-xl my-6">281-229-3139</div>
+            <div className="text-xl">waytohealthorg@gmail.com</div>
           </div>
           <div>
             <div>Sign up for our Newsletter</div>

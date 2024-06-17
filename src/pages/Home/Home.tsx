@@ -33,9 +33,13 @@ export const Home = () => {
                 Way To Health
               </h1>
 
-              <button className="btn btn-primary btn-wide font-bebas text-4xl ">
+              <a
+                href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
+                className="btn btn-primary btn-wide font-bebas text-4xl "
+                target="_blank"
+              >
                 Donate
-              </button>
+              </a>
             </div>
           </div>
         </div>

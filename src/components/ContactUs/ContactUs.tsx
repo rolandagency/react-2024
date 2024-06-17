@@ -9,8 +9,8 @@ export default function ContactUs() {
   return (
     <>
       <section className="flex flex-col gap-2" id="contact">
-        <div className="flex justify-between align-center w-[80%] m-auto">
-          <div className="text-center w-full">
+        <div className="flex justify-between align-center w-[80%] m-auto sm:flex-col xs:flex-col">
+          <div className="text-center w-full sm:my-3 xs:my-3">
             <FontAwesomeIcon
               icon={faMapLocationDot}
               size="2x"
@@ -22,7 +22,7 @@ export default function ContactUs() {
               Alvin TX, 77511
             </address>
           </div>
-          <div className="text-center w-full">
+          <div className="text-center w-full sm:my-3 xs:my-3">
             <FontAwesomeIcon
               icon={faPhone}
               size="2x"
@@ -34,7 +34,7 @@ export default function ContactUs() {
               (281) 229-4368
             </div>
           </div>
-          <div className="text-center w-full">
+          <div className="text-center w-full sm:my-3 xs:my-3">
             <FontAwesomeIcon
               icon={faEnvelope}
               size="2x"

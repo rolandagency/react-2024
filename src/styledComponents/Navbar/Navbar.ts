@@ -13,7 +13,7 @@ export const device = {
 
 export const NavbarWrapper = styled.nav.attrs({
   id: "divNav",
-  className: "container"
+  // className: "container"
 })`
   position: fixed;
   top: 0;

@@ -2,3 +2,48 @@
   height: 100vh;
   overflow: auto;
 }
+
+.hero_main {
+  height: 600px;
+  display: flex;
+  place-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: var(--bg-color);
+  background-image: url('/hero_boy-semi-final-2.png');
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  background-size: auto;
+  background-position: right;
+  opacity: 0;
+  animation: fade-in 3s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and ( min-width: 600px ) {
+  .hero_main {
+    background-position: center;
+    margin-top: 5.5rem !important;
+  }
+
+  .hero_main::before {
+    font-size: 5.625rem;
+    font-size: 6.25rem;
+    top: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .how_to_help {
+    flex-direction: column;
+  }
+}

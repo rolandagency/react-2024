@@ -12,24 +12,6 @@ export const AppProvider = ({ children }: { children: JSX.Element }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const heroSectionRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-  //     if (currentScrollY > lastScrollY) {
-  //       setScrollDirection('scroll-down');
-  //     } else {
-  //       setScrollDirection('scroll-up');
-  //     }
-  //     setLastScrollY(currentScrollY);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [lastScrollY]);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;

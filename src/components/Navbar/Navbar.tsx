@@ -26,10 +26,10 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
   };
 
   return (
+    // container
     <div
-      className={`container ${
-        scrollDirection === "scroll-down" ? styles.scrollDown : ""
-      }`}
+      className={`
+      ${scrollDirection === "scroll-down" ? styles.scrollDown : ""}`}
     >
       <NavbarWrapper>
         <FlexNav>

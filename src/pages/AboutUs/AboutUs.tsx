@@ -142,7 +142,7 @@ export const AboutUs = () => {
           <BlockTextAccent>WHO</BlockTextAccent> WE SERVE
         </BlockTextHeader>
         <hr />
-        <p className="mt-8 mr-12 mb-5 ml-9 pt-12 pr-5 pb-7 pl-5 gap-12 columns-2 break-normal font-medium text-lg">
+        <p className="mt-8 mr-12 mb-5 ml-9 pt-12 pr-5 pb-7 pl-5 gap-12 columns-2 sm:columns-1 xs:columns-1 break-normal font-medium text-lg">
           Your donations make a significant impact in our healthcare efforts in
           Haiti. They support the hiring of Haitian medical professionals,
           purchase of medications and supplies, and engagement of translators

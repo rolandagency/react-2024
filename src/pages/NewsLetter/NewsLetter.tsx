@@ -35,7 +35,7 @@ export const NewsLetter = () => {
           <img src="Newsletter_hero.png" alt="hero" />
         </div>
       </section>
-      <section className="grid grid-cols-3">
+      <section className="grid md:grid-cols-3">
         <div className="col-span-2 px-20 pt-20">
           {articles.map((article) => (
             <Article
@@ -70,12 +70,21 @@ export const NewsLetter = () => {
             <div className="text-xl my-6">281-229-3139</div>
             <div className="text-xl">waytohealthorg@gmail.com</div>
           </div>
-          <div>
-            <div>Sign up for our Newsletter</div>
-            <div>EMAIL</div>
-          </div>
+          <form className="my-5">
+            <button
+              className="font-inter italic text-accent-color text-3xl py-5"
+              type="submit"
+            >
+              Sign up for our Newsletter
+            </button>
+            <input
+              className="bg-[#29282D] text-3xl py-3"
+              type="email"
+              placeholder="  Email"
+            />
+          </form>
         </div>
-        <div className="text-5xl col-span-2 bg-[#29282D] mix-blend-screen py-10 px-16">
+        <div className="text-5xl bg-[#29282D] mix-blend-screen py-10 px-16 col-span-2">
           <span className="text-accent-color">WAY TO</span> HEALTH - JANUARY
           2024
         </div>

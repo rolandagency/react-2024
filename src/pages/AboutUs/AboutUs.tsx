@@ -136,7 +136,10 @@ export const AboutUs = () => {
   return (
     <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
       <Navbar scrollDirection={scrollDirection} />
-      <section className="mt-[10%]" ref={heroSectionRef}>
+      <section
+        className="mt-[15%] sm:mt-[25%] xs:mt-[20%]"
+        ref={heroSectionRef}
+      >
         <BlockTextHeader>
           {" "}
           <BlockTextAccent>WHO</BlockTextAccent> WE SERVE

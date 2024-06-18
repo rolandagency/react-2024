@@ -1,23 +1,22 @@
 import daisyui from "daisyui";
 import plugin from "tailwindcss/plugin";
 
-const FlipCard = plugin(function({addUtilities}) {
+const FlipCard = plugin(function ({ addUtilities }) {
   addUtilities({
-    ".rotate-y-180" : {
-      transform: "rotateY(180deg)"
+    ".rotate-y-180": {
+      transform: "rotateY(180deg)",
     },
-    ".preserve-3d" : {
-      transformStyle: "preserve-3d"
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
     },
-    ".perspective" : {
-      perspective: "1000px"
+    ".perspective": {
+      perspective: "1000px",
     },
     ".backface-hidden": {
-      backfaceVisibility: "hidden"
-    }
-  })
-})
-
+      backfaceVisibility: "hidden",
+    },
+  });
+});
 
 /** @type {import('tailwindcss').Config} */
 
@@ -34,17 +33,17 @@ export default {
       "font-light": "var(--font-light)",
       "call-to-action": "var(--call-to-action)",
       "flip-card": "var(--flip-card)",
-      "footer": "#353238",
-      "icon": "#72797B",
+      footer: "#353238",
+      icon: "#72797B",
     },
     screens: {
-      '2xs': { 'min': '300px' },
-      xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
-      sm: { min: '576px', max: '897px' }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
-      md: { min: '898px', max: '1199px' }, // Tablet (matches max: iPad Pro @ 1112px).
-      lg: { min: '1200px' }, // Desktop smallest.
-      xl: { min: '1259px' }, // Desktop wide.
-      '2xl': { min: '1359px' } // Desktop widescreen.
+      "2xs": { min: "300px" },
+      xs: { max: "575px" }, // Mobile (iPhone 3 - iPhone XS Max).
+      sm: { min: "576px", max: "897px" }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
+      md: { min: "898px", max: "1199px" }, // Tablet (matches max: iPad Pro @ 1112px).
+      lg: { min: "1200px" }, // Desktop smallest.
+      xl: { min: "1259px" }, // Desktop wide.
+      "2xl": { min: "1359px" }, // Desktop widescreen.
     },
   },
   extend: {},

@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { boardMembers } from "../../utils/boardMemberValues";
-import { teamMembers } from "../../utils/teamMemberValues";
+// import { teamMembers } from "../../utils/teamMemberValues";
 import { documentLinks } from "../../utils/documentLinkValues";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AppContext from "../../providers/AppContext";
+import { Footer } from "../../components/Footer/Footer";
 
 const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,13 +17,13 @@ const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const BlockText = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <p className="mt-2.5 mx-0 mb-7 py-0 px-2.5 break-normal font-medium text-lg">
-      {children}
-    </p>
-  );
-};
+// const BlockText = ({ children }: { children: React.ReactNode }) => {
+//   return (
+//     <p className="mt-2.5 mx-0 mb-7 py-0 px-2.5 break-normal font-medium text-lg">
+//       {children}
+//     </p>
+//   );
+// };
 
 const BlockTextAccent = ({ children }: { children: React.ReactNode }) => {
   return <span className="text-accent-color">{children}</span>;
@@ -62,43 +63,43 @@ const BoardMember = ({
   );
 };
 
-const FlipCard = ({
-  name,
-  img,
-  position,
-  text1,
-  text2,
-}: {
-  name: string;
-  img: string;
-  position: string;
-  text1: string;
-  text2: string;
-}) => {
-  return (
-    <div className="group perspective bg-transparent w-[300px] h-[350px] rounded-xl">
-      <div className="preserve-3d relative w-full h-full text-center duration-[600ms] shadow-[0 4px 8px 0 rgba(74, 74, 74, 0.2)] group-hover:rotate-y-180">
-        <div className="backface-hidden absolute w-full h-full rounded-xl bg-flip-card overflow-hidden">
-          <img
-            className="w-[300px] h-[280px] rounded-[10px 10px 0px 0px]"
-            src={img}
-            alt="Avatar"
-          />
-          <h1 className="text-call-to-action mb-0 mt-3.5 leading-3 font-semibold">
-            {name}
-          </h1>
-          <h3 className="text-call-to-action mb-0 mt-3.5 leading-3">
-            {position}
-          </h3>
-        </div>
-        <div className="backface-hidden absolute w-full h-full rounded-xl rotate-y-180 bg-accent-color text-font-light">
-          <p className="break-normal text-center font-medium m-5">{text1}</p>
-          <p>{text2}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const FlipCard = ({
+//   name,
+//   img,
+//   position,
+//   text1,
+//   text2,
+// }: {
+//   name: string;
+//   img: string;
+//   position: string;
+//   text1: string;
+//   text2: string;
+// }) => {
+//   return (
+//     <div className="group perspective bg-transparent w-[300px] h-[350px] rounded-xl">
+//       <div className="preserve-3d relative w-full h-full text-center duration-[600ms] shadow-[0 4px 8px 0 rgba(74, 74, 74, 0.2)] group-hover:rotate-y-180">
+//         <div className="backface-hidden absolute w-full h-full rounded-xl bg-flip-card overflow-hidden">
+//           <img
+//             className="w-[300px] h-[280px] rounded-[10px 10px 0px 0px]"
+//             src={img}
+//             alt="Avatar"
+//           />
+//           <h1 className="text-call-to-action mb-0 mt-3.5 leading-3 font-semibold">
+//             {name}
+//           </h1>
+//           <h3 className="text-call-to-action mb-0 mt-3.5 leading-3">
+//             {position}
+//           </h3>
+//         </div>
+//         <div className="backface-hidden absolute w-full h-full rounded-xl rotate-y-180 bg-accent-color text-font-light">
+//           <p className="break-normal text-center font-medium m-5">{text1}</p>
+//           <p>{text2}</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const DocumentLink = ({ title, file }: { title: string; file: string }) => {
   return (
@@ -135,13 +136,16 @@ export const AboutUs = () => {
   return (
     <div className="leading-normal w-full max-w-screen-xl font-normal mr-auto ml-auto ">
       <Navbar scrollDirection={scrollDirection} />
-      <section className="mt-[10%]" ref={heroSectionRef}>
+      <section
+        className="mt-[15%] sm:mt-[25%] xs:mt-[20%]"
+        ref={heroSectionRef}
+      >
         <BlockTextHeader>
           {" "}
           <BlockTextAccent>WHO</BlockTextAccent> WE SERVE
         </BlockTextHeader>
         <hr />
-        <p className="mt-8 mr-12 mb-5 ml-9 pt-12 pr-5 pb-7 pl-5 gap-12 columns-2 break-normal font-medium text-lg">
+        <p className="mt-8 mr-12 mb-5 ml-9 pt-12 pr-5 pb-7 pl-5 gap-12 columns-2 sm:columns-1 xs:columns-1 break-normal font-medium text-lg">
           Your donations make a significant impact in our healthcare efforts in
           Haiti. They support the hiring of Haitian medical professionals,
           purchase of medications and supplies, and engagement of translators
@@ -167,7 +171,7 @@ export const AboutUs = () => {
         </BlockTextHeader>
         <hr />
 
-        <div className="flex ml-auto max-w-[80%] gap-[10%] text-left my-7 mx-auto">
+        {/* <div className="flex ml-auto max-w-[80%] gap-[10%] text-left my-7 mx-auto">
           <div>
             <H2>Vision</H2>
             <p className="mt-2.5 mx-0 mb-7 py-0 px-2.5 break-normal font-medium text-lg">
@@ -211,7 +215,7 @@ export const AboutUs = () => {
               scelerisque mauris pellentesque.
             </BlockText>
           </div>
-        </div>
+        </div> */}
 
         <div className="my-0 mx-7 py-0 px-5">
           <H2>Statement of Faith</H2>
@@ -261,7 +265,7 @@ export const AboutUs = () => {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <BlockTextHeader>
           <BlockTextAccent>OUR</BlockTextAccent> TEAM
         </BlockTextHeader>
@@ -284,7 +288,7 @@ export const AboutUs = () => {
             />
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="border border-solid border-transparent h-auto text-center justify-center my-12 mx-0">
         <BlockTextHeader>
@@ -305,6 +309,7 @@ export const AboutUs = () => {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

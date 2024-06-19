@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import AppContext from "../../providers/AppContext";
+import { Footer } from "../../components/Footer/Footer";
 
 export const HowToHelp = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
@@ -22,14 +23,21 @@ export const HowToHelp = () => {
             >
               <div className="flex flex-col gap-2">
                 <h2>DONATIONS</h2>
-                <p>Paypal Link</p>
-                <p>Venmo: @Cite-Soleil</p>
+                {/* <p>Paypal Link</p> */}
+                <a
+                  href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
+                  className="btn btn-primary btn-wide font-bebas text-4xl "
+                  target="_blank"
+                >
+                  Donate
+                </a>
+                {/* <p>Venmo: @Cite-Soleil</p> */}
               </div>
 
-              <section>
+              {/* <section>
                 <div>
                   <h2 className="mb-2">needed supplies</h2>
-                  TBD
+                  TBd
                 </div>
               </section>
               <section>
@@ -37,7 +45,7 @@ export const HowToHelp = () => {
                   <h2 className="mb-2">mission trips</h2>
                   TBD
                 </div>
-              </section>
+              </section> */}
               <section>
                 <div>
                   <h2 className="mb-2">MATCHING DONATION PROGRAMS</h2>
@@ -72,6 +80,7 @@ export const HowToHelp = () => {
             </div>
             <ContactUs />
           </div>
+          <Footer />
         </div>
       </div>
     </>

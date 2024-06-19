@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import AppContext from "../../providers/AppContext";
+import { Footer } from "../../components/Footer/Footer";
 
 const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -73,6 +74,7 @@ export const OurWork = () => {
           and training the poor.
         </p>
       </section>
+      <Footer />
     </>
   );
 };

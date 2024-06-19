@@ -4,35 +4,42 @@ import { slides, TCarouselSlide } from "../../utils/carouselValues";
 import { convertedStyles } from "../../utils/convertedStyles";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
-
+import styles from "./Home.module.css";
 
 export const Home = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
   const heroSlides: TCarouselSlide[] = slides;
-  const heroImage = "./hero_boy-semi-final-2.png";
+  // const heroImage = "./hero_boy-semi-final-2.png";
 
   return (
     <div className="w-full overflow-auto">
       <div>
         <Navbar scrollDirection={scrollDirection} />
+        {/* work on hero image to make it look good on mobile */}
         <div
           ref={heroSectionRef}
-          className="hero min-h-screen mb-4 mt-[10rem]"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-          }}
+          className={`${styles.hero_main} mt-10`}
+          // className="hero min-h-screen mb-4 mt-[10rem]"
+          // style={{
+          //   backgroundImage: `url(${heroImage})`,
+          // }}
         >
-          <div className=" hero-overlay bg-opacity-60"></div>
+          {/* hero-overlay */}
+          <div className="bg-opacity-60"></div>
           <div className="hero-content text-center text-base-100">
             <div className="max-w-lg">
               <h1 className="mb-5 text-9xl font-bold uppercase font-bebas ">
                 Way To Health
               </h1>
 
-              <button className="btn btn-primary btn-wide font-bebas text-4xl ">
+              <a
+                href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
+                className="btn btn-primary btn-wide font-bebas text-4xl "
+                target="_blank"
+              >
                 Donate
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -76,7 +83,8 @@ export const Home = () => {
           </div>
           <div>
             <div className="flex px-7 items-center justify-center">
-              <p>
+              <p>Keep an eye out for upcoming events</p>
+              {/* <p>
                 Giving Tuesday, November 28, 2023 Participate in Giving Tuesday
                 by supporting Way to Health, enabling us to sustain crucial care
                 for the underprivileged. A mere $1 can furnish medicine for a
@@ -90,7 +98,7 @@ export const Home = () => {
                 to 90, reaching more communities by expanding into additional
                 neighborhoods in Cite Soleil, Haiti. (Add in a LEARN MORE link
                 that goes into the "Our Work" datapage)
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
@@ -130,7 +138,7 @@ export const Home = () => {
           <span className="text-primary">HOW TO </span>
           HELP
         </div>
-        <div className="flex p-8 mx-auto gap-4 ">
+        <div className={`flex p-8 mx-auto gap-4 ${styles.how_to_help}`}>
           <p>
             DONATE: Empower change effortlessly by making a donation—it's the
             simplest and most impactful way to get involved! Every contribution,
@@ -158,25 +166,6 @@ export const Home = () => {
     </div>
   );
 };
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-primary text-base-100 text-center py-4 w-full">
-//       <div className="flex justify-center gap-5">
-//         <p className="text-2xl">© 2023 Way to Health</p>
-//         <a
-//           href="https://www.youtube.com/@waytohealth4119/featured"
-//           target="_blank"
-//         >
-//           <FontAwesomeIcon icon={faYoutube} size="2x" />
-//         </a>
-//         <a href="https://www.facebook.com/medicalhelpforhaiti/" target="_blank">
-//           <FontAwesomeIcon icon={faFacebook} size="2x" />
-//         </a>
-//       </div>
-//     </footer>
-//   );
-// };
 
 const Carousel = ({ slides }: { slides: TCarouselSlide[] }) => {
   const [activeSlide, setActiveSlide] = useState(0);

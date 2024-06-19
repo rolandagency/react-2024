@@ -9,6 +9,7 @@ import {
   NavToggle,
   NavLinks,
   NavLiLink,
+  HeaderLinks,
 } from "../../styledComponents/Navbar/Navbar";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
@@ -25,7 +26,11 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
   };
 
   return (
-    <div className={scrollDirection === "scroll-down" ? styles.scrollDown : ""}>
+    // container
+    <div
+      className={`
+      ${scrollDirection === "scroll-down" ? styles.scrollDown : ""}`}
+    >
       <NavbarWrapper>
         <FlexNav>
           <NavHeader>
@@ -35,6 +40,15 @@ export const Navbar = ({ scrollDirection }: NavbarProps) => {
             <NavToggle onClick={handleToggle}>☰</NavToggle>
           </NavHeader>
           <NavLinks className={`${isOpen ? "flex" : "hidden"}`}>
+            <HeaderLinks>
+              <a
+                href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
+                className="btn btn-primary btn-wide font-bebas text-4xl "
+                target="_blank"
+              >
+                Donate
+              </a>
+            </HeaderLinks>
             <ul className={styles.ul}>
               {navLinks.map((link) => {
                 const { id, href, text } = link;

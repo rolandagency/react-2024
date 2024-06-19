@@ -13,6 +13,7 @@ export const device = {
 
 export const NavbarWrapper = styled.nav.attrs({
   id: "divNav",
+  // className: "container"
 })`
   position: fixed;
   top: 0;
@@ -20,7 +21,6 @@ export const NavbarWrapper = styled.nav.attrs({
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
   z-index: 1000;
   transition: all 300ms ease-in-out;
   background-color: #2e2d33
@@ -71,12 +71,28 @@ export const NavToggle = styled.button.attrs({
   }
 `;
 
+export const HeaderLinks = styled.div.attrs({
+  id: "headerLinks"
+})`
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 20px;
+
+  @media ${device.tablet} {
+    margin: auto;
+    padding-top: 20px;
+    justify-content: flex-end;
+  }
+`;
+
 export const NavLinks = styled.div.attrs({
   id: "navLinks",
   })`
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  justify-content: space-evenly;
   background-color: #2e2d33;
 
   @media ${device.tablet} {
@@ -85,6 +101,9 @@ export const NavLinks = styled.div.attrs({
     z-index: 1;
     background: transparent;
     background-color: transparent;
+    flex-direction: row
+    justify-content: space-evenly;
+
   }
 
   @media ${device.desktop} {
@@ -97,7 +116,6 @@ list-style: none;
 margin: 1.25rem 0;
 border-bottom: 2px solid whitesmoke;
 font-family: "Bebas Neue", cursive, sans-serif;
-width: 300px;
 padding-left: 5px;
 position: relative;
 
@@ -120,7 +138,9 @@ position: relative;
 
 @media ${device.tablet} {
   display: inline-block;
-    border: none;
+  border: none;
+  margin: 1.25rem 12px;
+  width: fit-content;
 }
 
 @media ${device.desktop} {

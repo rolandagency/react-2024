@@ -3,6 +3,21 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import styles from "./Gallery.module.css";
 import AppContext from "../../providers/AppContext";
 
+const galleryImageLinks = [
+  "/gallery/image1.png",
+  "/gallery/image2.png",
+  "/gallery/image3.png",
+  "/gallery/image4.png",
+  "/gallery/image5.png",
+  "/gallery/image6.png",
+  "/gallery/image7.png",
+  "/gallery/image8.png",
+  "/gallery/image9.png",
+  "/gallery/image10.png",
+  "/gallery/image11.png",
+  "/gallery/image12.png",
+];
+
 export const Gallery = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
   // TODO: Nav Blocks Header, update once nav is updated.
@@ -24,20 +39,11 @@ export const Gallery = () => {
                 <img
                   className={styles.headerGridImage}
                   src="/gallery/image0.png"
-                  alt=""
+                  alt="smiling child image"
                 />
-                <img src="/gallery/image1.png" alt="" />
-                <img src="/gallery/image2.png" alt="" />
-                <img src="/gallery/image3.png" alt="" />
-                <img src="/gallery/image4.png" alt="" />
-                <img src="/gallery/image5.png" alt="" />
-                <img src="/gallery/image6.png" alt="" />
-                <img src="/gallery/image7.png" alt="" />
-                <img src="/gallery/image8.png" alt="" />
-                <img src="/gallery/image9.png" alt="" />
-                <img src="/gallery/image10.png" alt="" />
-                <img src="/gallery/image11.png" alt="" />
-                <img src="/gallery/image12.png" alt="" />
+                {galleryImageLinks.map((link) => (
+                  <img src={link} alt="gallery image" />
+                ))}
               </div>
             </section>
           </div>

@@ -1,12 +1,12 @@
 .gallery {
-  margin-top: 10rem;
+  margin-top: 8.9rem;
 }
 .gallery header {
   height: 21rem;
   border-bottom: 1px solid var(--font-light);
   position: relative;
   background-image: url("/gallery/gallery_hero.png");
-  background-size: 50%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position:right;
   display: flex;
@@ -15,6 +15,7 @@
   max-width: 100%;
   width: 100%;
 }
+
 .gallery header h1 {
   max-width: 1200px;
   margin-left: 10rem;
@@ -23,11 +24,9 @@
   font-style: italic;
 }
 .gallery_images {
-  /* height: 100rem; */
   background-color: var(--call-to-action);
   width: 100vw;
   max-width: 100%;
-  /* position: fixed; */
   left: 0;
   right: 0;
 }
@@ -44,17 +43,70 @@
 
 .galleryGrid {
   display: grid;
-  grid-auto-rows: minmax(141.72px, auto);
+  grid-auto-rows: auto;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 10px;
   background-color: var(--call-to-action);
-}
-
-.headerGridImage {
-  grid-column: 1/5;
-  grid-row: 1;
 }
 
 .gallery header span {
   color: var(--accent-color);
+}
+
+@media screen and (width >= 1201px) {
+  .gallery header {
+    background-position: right 0px top -63px;
+  }
+}
+
+@media screen and (width <= 1200px){
+  .gallery header {
+    background-position: right 0px top -63px;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .gallery header {
+    background-position: right 0px top -46px;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .gallery header {
+    background-position: right 0px top 0px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+}
+
+@media screen and (width <= 639px) {
+  .gallery {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (width <= 625px) {
+  .gallery header h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (width <= 600px) {
+  .gallery header {
+    background-size: cover;
+  }
+}
+
+@media screen and (width <= 425px) {
+  .galleryGrid {
+    grid-template-columns: repeat(1, 1fr)
+  }
+  
+  .gallery header h1 {
+    font-size: 55px;
+  }
 }

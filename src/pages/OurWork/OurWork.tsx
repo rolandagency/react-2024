@@ -11,6 +11,10 @@ const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+const H2 = ({ children }: { children: React.ReactNode }) => {
+  return <h2 className="font-bebas text-2xl">{children}</h2>;
+};
+
 const BlockTextAccent = ({ children }: { children: React.ReactNode }) => {
   return <span className="text-accent-color">{children}</span>;
 };
@@ -54,25 +58,170 @@ export const OurWork = () => {
           <img className={`object-fill`} src="./our_work_hero.svg" alt="" />
         </div>
       </section>
-
-      {/* Mission Trip */}
+      <section className="mt-[8%] mb-0">
+        <BlockTextHeader>
+          {" "}
+          <BlockTextAccent>MISSION</BlockTextAccent> TRIPS
+        </BlockTextHeader>
+        <hr />
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Description</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Nov 2023 trip</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Cholera clinic Oct 2022</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+      </section>
 
       <section className="mt-[8%] mb-0">
         <BlockTextHeader>
           {" "}
-          <BlockTextAccent>MISSION</BlockTextAccent> TRIP
+          <BlockTextAccent>HEALTH</BlockTextAccent>CARE
         </BlockTextHeader>
+        <hr />
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Description</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Primary Care</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Health Clinics</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Health Education</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Healthcare Management</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
       </section>
-
-      <section className="missionTrips" id="missionTrips">
-        <p className="w-3/4 mt-0 mb-5 ml-auto mr-auto pt-0 pr-35 pb-7 pl-35 gap-12 break-normal font-medium text-lg">
-          Contact us for the next scheduled trip. Missionaries pay their own
-          travel expenses, food, lodging and water. Mission travel is eight
-          days. Trip itineraries are planned months in advance to ensure a
-          successful trip for the poor. Health and business professionals put
-          their skills to the test in mobile medical clinics, working alongside
-          and training the poor.
-        </p>
+      <section className="mt-[8%] mb-16">
+        <BlockTextHeader>
+          {" "}
+          <BlockTextAccent>NON-MEDICAL</BlockTextAccent> PROJECTS
+        </BlockTextHeader>
+        <hr />
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Malnourished feeding program</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>English school</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
+        <div className="my-0 mx-7 py-0 px-5">
+          <H2>Housing</H2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            dolorum, iste odit repudiandae, nostrum accusamus rerum earum dicta
+            esse sit ullam! Deleniti vero laudantium dolorum veritatis, corporis
+            inventore impedit. Consequuntur. Repudiandae ea quibusdam aliquam
+            dolorem similique nostrum voluptate, provident voluptates. Tempora
+            eos dolor fugit consequuntur atque unde possimus accusantium quam
+            provident placeat hic nemo temporibus, dolorem quos laudantium?
+            Aperiam, fugit.
+          </p>
+        </div>
       </section>
       <Footer />
     </>

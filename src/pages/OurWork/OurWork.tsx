@@ -224,28 +224,6 @@ export const OurWork = () => {
         </div>
       </section>
       <Footer />
-
-      {/* Mission Trip
-
-      <section className="mt-[8%] mb-0">
-        <BlockTextHeader>
-          {" "}
-          <BlockTextAccent>MISSION</BlockTextAccent> TRIP
-        </BlockTextHeader>
-      </section>
-
-      <section className="missionTrips" id="missionTrips">
-        <p className="w-3/4 mt-0 mb-5 ml-auto mr-auto pt-0 pr-35 pb-7 pl-35 gap-12 break-normal font-medium text-lg">
-          Contact us for the next scheduled trip. Missionaries pay their own
-          travel expenses, food, lodging and water. Mission travel is eight
-          days. Trip itineraries are planned months in advance to ensure a
-          successful trip for the poor. Health and business professionals put
-          their skills to the test in mobile medical clinics, working alongside
-          and training the poor.
-        </p>
-      </section>
-      <Footer />
-    </> */}
     </>
   );
 };

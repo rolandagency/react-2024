@@ -5,6 +5,7 @@ import { Gallery } from "./pages/Gallery/Gallery";
 import { HowToHelp } from "./pages/HowToHelp/HowToHelp";
 import { NewsLetter } from "./pages/NewsLetter/NewsLetter";
 import { OurWork } from "./pages/OurWork/OurWork";
+import { MeetingMinutes } from "./pages/MeetingMinutes/MeetingMinutes";
 import { AppProvider } from "./providers/AppContext";
 
 import "./App.css";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/howToHelp" element={<HowToHelp />} />
           <Route path="/newsletter" element={<NewsLetter />} />
           <Route path="/ourWork" element={<OurWork />} />
+          <Route path="/meetingMinutes" element={<MeetingMinutes />} />
         </Routes>
       </Router>
     </AppProvider>

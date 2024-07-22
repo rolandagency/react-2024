@@ -8,6 +8,7 @@ import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 const BlockTextHeader = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -299,7 +300,7 @@ export const AboutUs = () => {
           <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
             Financials and meeting minutes
           </p>
-
+          <NavLink to={"/meetingMinutes"}>Meeing Minutes</NavLink>
           {documentLinks.map((document) => (
             <DocumentLink
               key={document.title}

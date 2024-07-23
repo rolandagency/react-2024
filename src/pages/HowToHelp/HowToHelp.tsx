@@ -3,6 +3,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
+import { Volunteer } from "../../components/Volunteer/Volunteer";
 
 export const HowToHelp = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
@@ -18,11 +19,11 @@ export const HowToHelp = () => {
             <p>way to health</p> */}
 
             <section
-              className="flex flex-col gap-2 border-b-[1px] border-white pb-4 mb-8"
+              className="flex flex-col gap-2 border-b-[1px] border-white pb-4 mb-8 py-10 px-10"
               ref={heroSectionRef}
             >
               <div className="flex flex-col gap-2">
-                <h2>DONATIONS</h2>
+                <h2 className="mb-3">DONATIONS</h2>
                 {/* <p>Paypal Link</p> */}
                 <a
                   href="https://www.paypal.com/donate/?hosted_button_id=SG5VSJCXAEXQQ"
@@ -48,8 +49,8 @@ export const HowToHelp = () => {
               </section> */}
               <section>
                 <div>
-                  <h2 className="mb-2">MATCHING DONATION PROGRAMS</h2>
-                  <p>
+                  <h2 className="my-6">MATCHING DONATION PROGRAMS</h2>
+                  <p className="mb-6">
                     Looking to maximize the impact of your donation? Inquire
                     with your employer about their donation matching program!
                     When you contribute to Way to Health through this
@@ -67,10 +68,17 @@ export const HowToHelp = () => {
                 </div>
               </section>
             </section>
+
+            <section>
+              <div className="flex flex-col justify-center items-center py-5 px-10">
+                  <Volunteer />
+              </div>
+            </section>
+
             <div className="text-7xl text-center font-bebas mb-6">
               <span className="text-primary">CONTACT</span> US
             </div>
-            <div className="text-center mb-6">
+            <div className="text-center mb-6 px-10">
               Please contact us with any questions or if you need info about
               traveling abroad as a volunteer. Do you have questions about how
               to channel your skills to get involved? Are you interested in

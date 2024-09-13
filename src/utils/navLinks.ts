@@ -28,5 +28,10 @@ export const navLinks = [
     id: 5,
     href: "/ourWork",
     text: "Our Work",
+  },
+  {
+    id: 6,
+    href: "/documents",
+    text: "Public Documents",
   }
 ]

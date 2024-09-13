@@ -2,10 +2,6 @@ import { useContext } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { boardMembers } from "../../utils/boardMemberValues";
 // import { teamMembers } from "../../utils/teamMemberValues";
-import { documentLinks } from "../../utils/documentLinkValues";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-regular-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
 
@@ -100,35 +96,6 @@ const BoardMember = ({
 //     </div>
 //   );
 // };
-
-const DocumentLink = ({ title, file }: { title: string; file: string }) => {
-  return (
-    <div className="border border-solid border-transparent flex justify-center items-center flex-row gap-2.5 flex-wrap my-0 mx-auto py-0 px-12">
-      <h3 className="text-left ml-12 text-lg">{title}</h3>
-      <div className="border border-solid border-transparent flex justify-center items-center flex-row gap-2.5 flex-wrap my-6 mx-0">
-        <div className="my-0 ml-1 mr-3.5 break-normal text-left font-medium">
-          <a href={file} target="_blank">
-            <FontAwesomeIcon className="mr-4 text-accent-color" icon={faEye} />
-            View
-          </a>
-        </div>
-        <div>
-          <a
-            className="my-0 ml-1 mr-3.5 break-normal text-left font-medium"
-            href={file}
-            download
-          >
-            <FontAwesomeIcon
-              className="mr-4 text-accent-color"
-              icon={faDownload}
-            />
-            Download
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const AboutUs = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
@@ -290,25 +257,6 @@ export const AboutUs = () => {
         </div>
       </section> */}
 
-      <section className="border border-solid border-transparent h-auto text-center justify-center my-12 mx-0">
-        <BlockTextHeader>
-          <BlockTextAccent>PUBLIC</BlockTextAccent> DOCUMENTS
-        </BlockTextHeader>
-
-        <div className="py-0 px-7 text-center">
-          <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
-            Financials and meeting minutes
-          </p>
-
-          {documentLinks.map((document) => (
-            <DocumentLink
-              key={document.title}
-              title={document.title}
-              file={document.file}
-            />
-          ))}
-        </div>
-      </section>
       <Footer />
     </div>
   );

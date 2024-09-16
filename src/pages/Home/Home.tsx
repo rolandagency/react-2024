@@ -5,7 +5,6 @@ import { convertedStyles } from "../../utils/convertedStyles";
 import AppContext from "../../providers/AppContext";
 import { Footer } from "../../components/Footer/Footer";
 
-
 export const Home = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
 
@@ -13,24 +12,24 @@ export const Home = () => {
   const heroImage = "./hero_boy-semi-final-2.png";
 
   return (
-    <div className="w-full overflow-auto">
+    <div className='w-full overflow-auto'>
       <div>
         <Navbar scrollDirection={scrollDirection} />
         <div
           ref={heroSectionRef}
-          className="hero min-h-screen mb-4 mt-[10rem]"
+          className='hero min-h-screen mb-4 mt-[10rem]'
           style={{
             backgroundImage: `url(${heroImage})`,
           }}
         >
-          <div className=" hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-center text-base-100">
-            <div className="max-w-lg">
-              <h1 className="mb-5 text-9xl font-bold uppercase font-bebas ">
+          <div className=' hero-overlay bg-opacity-60'></div>
+          <div className='hero-content text-center text-base-100'>
+            <div className='max-w-lg'>
+              <h1 className='mb-5 text-9xl font-bold uppercase font-bebas '>
                 Way To Health
               </h1>
 
-              <button className="btn btn-primary btn-wide font-bebas text-4xl ">
+              <button className='btn btn-primary btn-wide font-bebas text-4xl '>
                 Donate
               </button>
             </div>
@@ -38,24 +37,24 @@ export const Home = () => {
         </div>
 
         <Carousel slides={heroSlides} />
-        <section className="flex justify-center items-center mt-6">
+        <section className='flex justify-center items-center mt-6'>
           <iframe
-            width="675"
-            height="400"
-            className="rounded-lg"
-            src="https://www.youtube.com/embed/bgwJ0ohfO34?si=MqSADAM6ZYJG69I5"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; 
-      encrypted-media; gyroscope; picture-in-picture"
+            width='560'
+            height='315'
+            src='https://www.youtube.com/embed/YedaREFkgD0?si=yp4Ve8jhJVc_mxrD'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerpolicy='strict-origin-when-cross-origin'
+            allowfullscreen
           ></iframe>
         </section>
         <section>
-          <h2 className="font-bebas text-center font-normal text-7xl my-8">
-            <span className="text-primary">About</span> Us
+          <h2 className='font-bebas text-center font-normal text-7xl my-8'>
+            <span className='text-primary'>About</span> Us
           </h2>
 
-          <p className="mx-auto w-1/2">
+          <p className='mx-auto w-1/2'>
             Committedly Focused on Enriching the Lives of the Underprivileged,
             both in our Local Community and in Haiti. Since its establishment in
             2016, Way to Health has provided vital medical services to more than
@@ -69,13 +68,13 @@ export const Home = () => {
             they have done.
           </p>
         </section>
-        <section className="text-center justify-center mx-auto h-auto w-1/2">
+        <section className='text-center justify-center mx-auto h-auto w-1/2'>
           <div className={convertedStyles["block-text-header"]}>
-            <span className="text-primary">UPCOMING </span>
+            <span className='text-primary'>UPCOMING </span>
             EVENTS
           </div>
           <div>
-            <div className="flex px-7 items-center justify-center">
+            <div className='flex px-7 items-center justify-center'>
               <p>
                 Giving Tuesday, November 28, 2023 Participate in Giving Tuesday
                 by supporting Way to Health, enabling us to sustain crucial care
@@ -97,7 +96,7 @@ export const Home = () => {
         <section
           className={`${convertedStyles.scripture} mx-auto w-2/3 leading-10`}
         >
-          <p className="text-2xl">2 Corinthians 9: 6-11</p>
+          <p className='text-2xl'>2 Corinthians 9: 6-11</p>
           <p>
             <sup>6</sup> Remember this: Whoever sows sparingly will also reap
             sparingly, and whoever sows generously will also reap generously.
@@ -122,15 +121,15 @@ export const Home = () => {
           </p>
         </section>
       </div>
-      <section className="mb-5 mx-auto px-8">
-        <img src="./group-2-banner.png" alt="group photo" />
+      <section className='mb-5 mx-auto px-8'>
+        <img src='./group-2-banner.png' alt='group photo' />
       </section>
-      <section className="font-raleway text-center justify-center mb-12">
+      <section className='font-raleway text-center justify-center mb-12'>
         <div className={convertedStyles["block-text-header"]}>
-          <span className="text-primary">HOW TO </span>
+          <span className='text-primary'>HOW TO </span>
           HELP
         </div>
-        <div className="flex p-8 mx-auto gap-4 ">
+        <div className='flex p-8 mx-auto gap-4 '>
           <p>
             DONATE: Empower change effortlessly by making a donation—it's the
             simplest and most impactful way to get involved! Every contribution,
@@ -188,7 +187,7 @@ const Carousel = ({ slides }: { slides: TCarouselSlide[] }) => {
   };
 
   return (
-    <div className="carousel shadow-2xl bg-base-100 w-full p-6">
+    <div className='carousel shadow-2xl bg-base-100 w-full p-6'>
       {slides.map((slide, index) => {
         if (index !== activeSlide) return null;
         return (
@@ -214,28 +213,28 @@ const CarouselSlide = ({
   handlePrev: () => void;
 }) => {
   return (
-    <div id={slide.id} className="carousel-item w-full relative ">
-      <div className="mx-auto">
+    <div id={slide.id} className='carousel-item w-full relative '>
+      <div className='mx-auto'>
         <img
           src={slide.imgSrc}
           alt={slide.imgAlt}
-          className="w-full relative rounded-lg"
+          className='w-full relative rounded-lg'
         />
-        <div className="absolute bottom-5 left-5 right-5">
+        <div className='absolute bottom-5 left-5 right-5'>
           <a
             href={slide.link}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-neutral text-lg"
+            target='_blank'
+            rel='noreferrer'
+            className='btn btn-neutral text-lg'
           >
             {slide.linkText}
           </a>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <button onClick={handlePrev} className="btn btn-circle">
+        <div className='absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2'>
+          <button onClick={handlePrev} className='btn btn-circle'>
             ❮
           </button>
-          <button onClick={handleNext} className="btn btn-circle">
+          <button onClick={handleNext} className='btn btn-circle'>
             ❯
           </button>
         </div>

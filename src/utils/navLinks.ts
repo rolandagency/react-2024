@@ -38,6 +38,5 @@ export const navLinks = [
     id: 7,
     href: "https://www.bonfire.com/org/way-to-health-812026805/?utm_source=copy_link&utm_medium=org_overview_share&utm_campaign=way-to-health-812026805&utm_content=default",
     text: "Store",
-    target: "_blank",
   },
 ];

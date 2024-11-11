@@ -19,19 +19,19 @@ export const navLinks = [
     href: "/howToHelp",
     text: "How to Help",
   },
-  {
-    id: 4,
-    href: "/newsletter",
-    text: "Newsletter",
-  },
-  {
-    id: 5,
-    href: "/ourWork",
-    text: "Our Work",
-  },
+  // {
+  //   id: 4,
+  //   href: "/newsletter",
+  //   text: "Newsletter",
+  // },
+  // {
+  //   id: 5,
+  //   href: "/ourWork",
+  //   text: "Our Work",
+  // },
   {
     id: 6,
     href: "/documents",
     text: "Public Documents",
-  }
-]
+  },
+];

@@ -5,6 +5,7 @@ import { meetingMinuteLinks } from "../../utils/meetingMinutesValues";
 import { DocumentLink } from "../../components/Documents/DocumentLink";
 import { documentLinks } from "../../utils/documentLinkValues";
 import { Footer } from "../../components/Footer/Footer";
+import "./PublicDocuments.css";
 
 export const PublicDocuments = () => {
   const { scrollDirection, heroSectionRef } = useContext(AppContext);
@@ -25,6 +26,7 @@ export const PublicDocuments = () => {
           <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
             Financials
           </p>
+
           {documentLinks.map((document) => (
             <DocumentLink
               key={document.title}
@@ -36,13 +38,15 @@ export const PublicDocuments = () => {
           <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
             Meeting minutes
           </p>
-          {meetingMinuteLinks.map((meetingMinute) => (
-            <DocumentLink
-              key={meetingMinute.file}
-              title={meetingMinute.file}
-              file={"/meeting-minutes/" + meetingMinute.file}
-            />
-          ))}
+          <div className="h-96 overflow-auto minutesScrollColor">
+            {meetingMinuteLinks.map((meetingMinute) => (
+              <DocumentLink
+                key={meetingMinute.file}
+                title={meetingMinute.file}
+                file={"/meeting-minutes/" + meetingMinute.file}
+              />
+            ))}
+          </div>
         </div>
       </section>
       <Footer />

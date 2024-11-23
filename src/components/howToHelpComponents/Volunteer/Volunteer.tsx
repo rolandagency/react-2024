@@ -1,12 +1,11 @@
-import { ReleaseLiability } from "../../components/Volunteer/VolunteerElements/ReleaseLiability";
-import { CodeOfConduct } from "../../components/Volunteer/VolunteerElements/CodeOfConduct";
-import { TripInfo } from "../../components/Volunteer/VolunteerElements/TripInfo";
-
+import { ReleaseLiability } from "./VolunteerElements/ReleaseLiability";
+import { CodeOfConduct } from "./VolunteerElements/CodeOfConduct";
+import { TripInfo } from "./VolunteerElements/TripInfo";
 
 export const Volunteer = () => {
   return (
     <section>
-      <div>
+      {/* <div>
         <h2>MISSIONARY VOLUNTEERS</h2>
           <p className = "my-8">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -22,24 +21,21 @@ export const Volunteer = () => {
             dignissimos ipsum molestias doloremque repellendus a error, 
             atque, iusto inventore suscipit autem quis.
           </p>
-      </div>
+      </div> */}
 
       <div className="flex justify-center items-center flex-col gap-1.5 flex-wrap my-8 mx-0">
         <div>
           <ReleaseLiability />
         </div>
         <br />
-        <div >
+        <div>
           <CodeOfConduct />
         </div>
         <br />
-        <div >
+        <div>
           <TripInfo />
         </div>
       </div>
-   </section>
+    </section>
   );
 };
-
-
-

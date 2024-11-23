@@ -19,10 +19,6 @@ export const HowToHelp = () => {
         <div>
           <Navbar scrollDirection={scrollDirection} />
           <div className="mb-4 mt-[10rem]">
-            {/* TODO update later with provided information */}
-            {/* <h1 className="text-3xl font-bold underline">How To Help</h1>
-            <p>way to health</p> */}
-
             <section
               className="flex flex-col gap-2 border-b-[1px] border-white pb-4 mb-8 py-10 px-10"
               ref={heroSectionRef}

@@ -51,7 +51,8 @@ export const Home = () => {
             height="400"
             className="rounded-lg"
             // src="https://www.youtube.com/embed/bgwJ0ohfO34?si=MqSADAM6ZYJG69I5"
-            src="https://www.youtube.com/embed/YedaREFkgD0?si=41uAncW6DVYD1EJk"
+            src="https://youtu.be/AoFsW-DMR9o?si=1q58OJhjBJreNeVa"
+            // src="https://www.youtube.com/embed/YedaREFkgD0?si=41uAncW6DVYD1EJk"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; 

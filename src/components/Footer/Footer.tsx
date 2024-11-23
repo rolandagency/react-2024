@@ -32,11 +32,9 @@ export const Footer = () => {
               </div>
         </div>
       </section>
-
-      <div className="content-center mb-12 sm:mt-2 sm:ml-2 xs:mt-2">
+        <div className="content-center mb-12 sm:mt-2 sm:ml-2 xs:mt-2">
           <Partner />
         </div>
-
       <div className="flex justify-center gap-5 mt-4 border border-transparent sm:px-4 sm:mx-24 sm:flex 
                       sm:justify-center sm:items-center">
         <p className="text-1xl align-center md:flex sm:flex-wrap xs:flex-wrap 

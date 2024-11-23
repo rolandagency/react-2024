@@ -50,8 +50,8 @@ export const Home = () => {
             width="675"
             height="400"
             className="rounded-lg"
-            // src="https://www.youtube.com/embed/bgwJ0ohfO34?si=MqSADAM6ZYJG69I5"
             src="https://www.youtube.com/embed/AoFsW-DMR9o?si=2ChCZGnumh5B75Oa"
+            //prev video below
             // src="https://www.youtube.com/embed/YedaREFkgD0?si=41uAncW6DVYD1EJk"
             title="YouTube video player"
             frameBorder="0"

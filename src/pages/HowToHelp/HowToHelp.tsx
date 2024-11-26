@@ -50,6 +50,7 @@ export const HowToHelp = () => {
           </div>
           <Footer />
         </div>
+        <div></div>
       </div>
     </>
   );

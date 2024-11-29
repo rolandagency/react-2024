@@ -4,6 +4,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { meetingMinuteLinks } from "../../utils/meetingMinutesValues";
 import { DocumentLink } from "../../components/Documents/DocumentLink";
 import { documentLinks } from "../../utils/documentLinkValues";
+import { bylawsLink } from "../../utils/byLawsLink";
 import { Footer } from "../../components/Footer/Footer";
 import "./PublicDocuments.css";
 
@@ -47,6 +48,17 @@ export const PublicDocuments = () => {
               />
             ))}
           </div>
+          <p className="mt-7 mr-11 mb-5 ml-20 py-0 px-20 break-normal text-left font-medium text-lg">
+            By-Laws
+          </p>
+
+          {bylawsLink.map((document) => (
+            <DocumentLink
+              key={document.title}
+              title={document.title}
+              file={document.file}
+            />
+          ))}
         </div>
       </section>
       <Footer />

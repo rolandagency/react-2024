@@ -1,31 +1,23 @@
 import { useNavigate } from "react-router-dom";
-
+import { navLinks } from "../../../utils/navLinks";
 
 export const QuickLinks = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-    <div className="border border-transparent px-6 mx-8 py-2 
-    sm:mx-2 sm:px-2 xs:mx-2 xs:px-2">
-        <ul className="text-left">
-          <li onClick={() => navigate('/')}>
-          Home
-          </li>
-          <li onClick={() => navigate('/about')}>
-          About
-          </li>
-          <li onClick={() => navigate('/gallery')}>
-          Gallery
-          </li>
-          <li onClick={() => navigate('howToHelp')} >
-          How To Help
-          </li>
-          <li onClick={() => navigate('/newsletter')}>
-          Newsletter
-          </li>
-          <li onClick={() => navigate('/ourWork')}>
-          Our Work
-          </li>
-        </ul>
+    <div
+      className="border border-transparent px-6 mx-8 py-2 
+    sm:mx-2 sm:px-2 xs:mx-2 xs:px-2"
+    >
+      <ul className="text-left">
+        {navLinks.map((link) => {
+          const { id, text, href } = link;
+          return (
+            <li key={id} onClick={() => navigate(href)}>
+              {text}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

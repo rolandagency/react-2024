@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const size = {
   desktop: "1020px",
@@ -9,7 +9,6 @@ export const device = {
   desktop: `(min-width: ${size.desktop})`,
   tablet: `(min-width: ${size.tablet})`,
 };
-
 
 export const NavbarWrapper = styled.nav.attrs({
   id: "divNav",
@@ -23,7 +22,7 @@ export const NavbarWrapper = styled.nav.attrs({
   margin-right: auto;
   z-index: 1000;
   transition: all 300ms ease-in-out;
-  background-color: #2e2d33
+  background-color: #2e2d33;
 `;
 
 export const FlexNav = styled.div`
@@ -60,7 +59,7 @@ export const NavLogo = styled.h2.attrs({
 
 export const NavToggle = styled.button.attrs({
   id: "navToggle",
-  })`
+})`
   border: transparent;
   background: transparent;
   color: var(--font-light);
@@ -72,7 +71,7 @@ export const NavToggle = styled.button.attrs({
 `;
 
 export const HeaderLinks = styled.div.attrs({
-  id: "headerLinks"
+  id: "headerLinks",
 })`
   display: flex;
   justify-content: center;
@@ -89,7 +88,7 @@ export const HeaderLinks = styled.div.attrs({
 
 export const NavLinks = styled.div.attrs({
   id: "navLinks",
-  })`
+})`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
@@ -101,50 +100,50 @@ export const NavLinks = styled.div.attrs({
     z-index: 1;
     background: transparent;
     background-color: transparent;
-    flex-direction: row
+    flex-direction: row;
     justify-content: space-evenly;
-
   }
 
   @media ${device.desktop} {
     flex: 2;
   }
-  `;
+`;
 
 export const NavLiLink = styled.li`
-list-style: none;
-margin: 1.25rem 0;
-border-bottom: 2px solid whitesmoke;
-font-family: "Bebas Neue", cursive, sans-serif;
-padding-left: 5px;
-position: relative;
+  list-style: none;
+  margin: 1.25rem 0;
+  border-bottom: 2px solid whitesmoke;
+  font-family: "Bebas Neue", cursive, sans-serif;
+  padding-left: 5px;
+  position: relative;
 
-&::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  margin-top: 18px;
-  right: 0;
-  background-color: var(--accent-color);
-  transition: all 0.2s ease;
-}
-
-&:hover::after {
-  width: 100%;
-  left: 0;
-  background-color: var(--accent-color);
-}
-
-@media ${device.tablet} {
-  display: inline-block;
-  border: none;
-  margin: 1.25rem 12px;
-  width: fit-content;
-}
-
-@media ${device.desktop} {
   &::after {
-  margin-top: 24px;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    margin-top: 18px;
+    right: 0;
+    background-color: var(--accent-color);
+    transition: all 0.2s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: var(--accent-color);
+  }
+
+  @media ${device.tablet} {
+    display: inline-block;
+    border: none;
+    margin: 1.25rem 12px;
+    width: fit-content;
+  }
+
+  @media ${device.desktop} {
+    &::after {
+      margin-top: 24px;
+    }
   }
 `;

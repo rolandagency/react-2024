@@ -119,10 +119,12 @@ export const Home = () => {
             things at all times, having all that you need ,you will abound in
             every good work.
             <sup>9</sup> As it is written:
-            <blockquote>
-              "They have freely scattered their gifts to the poor; their
-              righteousness endures forever."<sup>[a]</sup>
-            </blockquote>
+          </p>
+          <blockquote>
+            "They have freely scattered their gifts to the poor; their
+            righteousness endures forever."<sup>[a]</sup>
+          </blockquote>
+          <p>
             <sup>10</sup> Now he who supplies seed to the sower and bread for
             food will also supply and increase your store of see and will
             enlarge the harvest of your righteousness. <sup>11</sup> You will be

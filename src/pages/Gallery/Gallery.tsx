@@ -47,9 +47,12 @@ export const Gallery = () => {
   }) => {
     return (
       <div className="carousel-item w-full relative ">
-        <div className="mx-auto">
+        <div className="mx-auto ">
           {slide.type === "image" && (
-            <img src={slide.src} className="w-full relative rounded-lg" />
+            <img
+              src={slide.src}
+              className="w-full relative rounded-lg object-cover"
+            />
           )}
           {slide.type === "video" && (
             <video
@@ -80,9 +83,10 @@ export const Gallery = () => {
     );
   };
   // TODO: Nav Blocks Header, update once nav is updated.
+
   return (
     <>
-      <div className="w-full max-w-[1200px] m-auto ">
+      <div className="w-full max-w-[800px] m-auto ">
         <div>
           <Navbar scrollDirection={scrollDirection} />
         </div>

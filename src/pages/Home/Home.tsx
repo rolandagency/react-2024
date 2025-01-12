@@ -213,6 +213,7 @@ const CarouselSlide = ({
           src={slide.imgSrc}
           alt={slide.imgAlt}
           className="w-full relative rounded-lg"
+          loading="lazy"
         />
         <div className="absolute bottom-5 left-5 right-5">
           <a

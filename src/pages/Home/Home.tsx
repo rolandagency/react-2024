@@ -17,14 +17,7 @@ export const Home = () => {
       <div>
         <Navbar scrollDirection={scrollDirection} />
         {/* work on hero image to make it look good on mobile */}
-        <div
-          ref={heroSectionRef}
-          className={`${styles.hero_main} mt-10`}
-          // className="hero min-h-screen mb-4 mt-[10rem]"
-          // style={{
-          //   backgroundImage: `url(${heroImage})`,
-          // }}
-        >
+        <div ref={heroSectionRef} className={`${styles.hero_main} mt-10`}>
           {/* hero-overlay */}
           <div className="bg-opacity-60"></div>
           <div className="hero-content text-center text-base-100">
@@ -51,12 +44,10 @@ export const Home = () => {
             height="400"
             className="rounded-lg"
             src="https://www.youtube.com/embed/AoFsW-DMR9o?si=2ChCZGnumh5B75Oa"
-            //?prev video below
-            // src="https://www.youtube.com/embed/YedaREFkgD0?si=41uAncW6DVYD1EJk"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; 
-      encrypted-media; gyroscope; picture-in-picture"
+            encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </section>
         <section>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const size = {
   desktop: "1020px",
-  tablet: "640px",
+  tablet: "750px",
 };
 
 export const device = {

@@ -52,6 +52,7 @@ export const Gallery = () => {
             <img
               src={slide.src}
               className="w-full relative rounded-lg object-cover"
+              loading="lazy"
             />
           )}
           {slide.type === "video" && (
@@ -103,7 +104,7 @@ export const Gallery = () => {
                 {gallerySlides.map(
                   (slide) =>
                     slide.type === "image" && (
-                      <img src={slide.src} alt="gallery image" />
+                      <img src={slide.src} alt="gallery image" loading="lazy" />
                     )
                 )}
               </div>

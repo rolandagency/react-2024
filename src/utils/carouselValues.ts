@@ -11,7 +11,7 @@ export type TCarouselSlide = {
 export const slides: TCarouselSlide[] = [
   {
     id: "slide1",
-    imgSrc: "/carousel/one.jpg",
+    imgSrc: "/carousel/img_1.jpg",
     imgAlt: "Smiling child",
     link: "https://www.facebook.com/medicalhelpforhaiti",
     linkText: "Photo by Way to Health Foundation",
@@ -20,7 +20,7 @@ export const slides: TCarouselSlide[] = [
   },
   {
     id: "slide2",
-    imgSrc: "/carousel/two.jpg",
+    imgSrc: "/carousel/img_2.jpg",
     imgAlt: "Group Photo",
     link: "https://www.facebook.com/medicalhelpforhaiti",
     linkText: "Photo by Way to Health Foundation",
@@ -29,7 +29,7 @@ export const slides: TCarouselSlide[] = [
   },
   {
     id: "slide3",
-    imgSrc: "/carousel/three.jpg",
+    imgSrc: "/carousel/img_3.jpg",
     imgAlt: "fishing boats on shore",
     link: "https://www.facebook.com/medicalhelpforhaiti",
     linkText: "Photo by Way to Health Foundation",
@@ -38,7 +38,7 @@ export const slides: TCarouselSlide[] = [
   },
   {
     id: "slide4",
-    imgSrc: "/carousel/four.jpg",
+    imgSrc: "/carousel/img_4.jpg",
     imgAlt: "truck on dirt road",
     link: "https://www.facebook.com/medicalhelpforhaiti",
     linkText: "Photo by Way to Health Foundation",
@@ -47,7 +47,7 @@ export const slides: TCarouselSlide[] = [
   },
   {
     id: "slide5",
-    imgSrc: "/carousel/five.jpg",
+    imgSrc: "/carousel/img_5.jpg",
     imgAlt: "health check with child",
     link: "https://www.facebook.com/medicalhelpforhaiti",
     linkText: "Photo by Way to Health Foundation",
